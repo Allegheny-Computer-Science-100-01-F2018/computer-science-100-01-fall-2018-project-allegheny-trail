@@ -1,0 +1,27 @@
+---
+name: cmpsc-100-fall-2018-lab5
+break: true
+indent: 4
+---
+
+src/main:
+    java:
+        labfive/Main.java:
+            --single 8 --language Java
+            --multi 2 --language Java
+            --fragment "new Date()" --count 1
+            --fragment "= new" --count 1
+
+writing/ideas.md:
+    --words 150
+writing/proposal.md:
+    --paragraphs 3 --exact
+    --words 150
+writing/progress.md:
+    --words 150
+writing/report.md:
+    --paragraphs 6 --exact
+    --words 200
+--commits 10
+
+--command "gradle -q --console plain run" --executes
