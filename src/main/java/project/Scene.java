@@ -62,6 +62,9 @@ public class Scene {
             keyIndex++;
             break;
 
+        default:
+          //None
+          break;
       }
     }
 

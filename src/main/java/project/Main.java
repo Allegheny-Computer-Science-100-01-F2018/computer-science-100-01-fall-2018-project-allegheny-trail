@@ -6,17 +6,67 @@ import java.util.Scanner;
 
 public class Main {
   public static void main(String [] args) {
-    System.out.println("Allegheny Trail - Choose Your Adventure");
-    System.out.println("\nPlease choose an option:");
+    String userInput = null;
+    boolean inputOk = false;
+    Scanner scan = new Scanner(System.in);
+    clearScreen(); //Flush Terminal
+
+    while (inputOk == false) {
+      System.out.println("+-----------------------------------------------------+");
+      System.out.println("|       Allegheny Trail - Choose Your Adventure       |");
+      System.out.println("|               Please type a selection:              |");
+      System.out.println("|       [New Game] [Load Game] [Options] [Exit]       |");
+      System.out.println("+-----------------------------------------------------+");
+
+      userInput = scan.nextLine();
+      userInput.toLowerCase();
+      userInput.replace(" ", "");
+
+      System.out.println(userInput);
+
+      if (userInput != null) {
+        switch (userInput) {
+          case "newgame":
+              //New Game Stuff
+              inputOk = true;
+              break;
+
+          case "loadgame":
+              //Load Game Stuff
+              inputOk = true;
+              break;
+
+          case "options":
+              //Options Stuff
+              inputOk = true;
+              break;
+
+          case "exit":
+              clearScreen();
+              inputOk = true;
+              System.out.println("Exiting...");
+              try {
+                  Thread.sleep(1000);
+              } catch (InterruptedException ex) {
+                  Thread.currentThread().interrupt();
+              }
+              break;
+          default:
+              clearScreen();
+              //System.out.println("Input Not Recognized!");
+              break;
+        }
+      }
+    }
 
     Scene sc = new Scene();
 
     sc.readScene("00");
     /*
-    Scanner scanner = null;
+
     try {
       File saveFile = new File("saves/save.txt");
-      scanner = new Scanner(saveFile);
+
       System.out.println("  -Continue");
     } catch (FileNotFoundException noFile) {
       System.out.println("---No Save File Found---");
@@ -39,4 +89,11 @@ public class Main {
     */
 
   }
+
+  public static void clearScreen() {
+    System.out.print("\033[H\033[2J");
+    System.out.flush();
+   }
+
+
 }
