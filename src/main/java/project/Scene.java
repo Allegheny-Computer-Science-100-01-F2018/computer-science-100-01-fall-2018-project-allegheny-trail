@@ -5,60 +5,71 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Scene {
-  private int sceneId;
-  private String[][][] commands = commands[20][20][1];
+  private String sceneId;
+  private String[][][] commands = new String[20][20][2];
   private String sceneText;
   private int keyNum = 0;
   private int keyIndex = 0;
-  public void readScene(int inputSceneId) {
+
+  public Scene() {
+    //null
+  }
+
+  public void readScene(String inputSceneId) {
     sceneId = inputSceneId;
 
-    System.out.println("DEBUG: Reading in Scene: " + sceneId
+    System.out.println("DEBUG: Reading in Scene: " + sceneId);
 
     Scanner scanner = null;
     try {
-      File sceneFile = new File("Adventures/Adv_1/Story_Files/" + sceneId + "scene.txt");
+      File sceneFile = new File("adventures/adv_1/story_files/" + sceneId + "scene.txt");
       scanner = new Scanner(sceneFile);
     } catch (FileNotFoundException noFile) {
       System.out.println("ERROR: No scene file found with id " + sceneId);
     }
 
-    while (scanner.nextLine() != "") {
+    while (scanner.hasNextLine()) {
+      String input;
+      input = scanner.nextLine();
 
-      String input = scanner.nextLine();
+      System.out.println("DEBUG: Line Read = " + input);
+
       switch (input.substring(input.indexOf("["), input.indexOf("]") + 1)) {
         case ("[Scene_Text]"):
-            sceneText = input.substring(input.indexOf("\"") + 1, input.indexOf("\""));
+            sceneText = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
+            //System.out.println("DEBUG: Scene Text = " + sceneText);
             break;
+
         case ("[Key]"):
-            if (commands[keyNum][0][0] == "") {
-              commands[keyNum][0][0] = input.substring(input.indexOf("\""), input.indexOf("\""));
+            if (commands[keyNum][0][0] == null) {
+              commands[keyNum][0][0] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
+              //System.out.println("DEBUG: Array Empty, inserting:" + input.substring(input.indexOf("<") + 1, input.indexOf(">")));
             } else {
               keyNum++;
-              commands[keyNum][0][0] = input.substring(input.indexOf("\""), input.indexOf("\""));
+              commands[keyNum][0][0] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
               keyIndex = 0;
+
+              //System.out.println("DEBUG: Array not empty");
+              //System.out.println("DEBUG: Inserting: " + input.substring(input.indexOf("<") + 1, input.indexOf(">")));
+              //System.out.println("DEBUG: Keynum = " + keyNum);
+              //System.out.println("DEBUG: KeyIndex Reset");
             }
             break;
+
         case ("[Obj]"):
-            commands[keyNum][1 + keyIndex][0] = input.substring(input.indexOf("("), input.indexOf(")"));
-            commands[keyNum][1 + keyIndex][1] = input.substring(input.indexOf("\""), input.indexOf("\""));
+            commands[keyNum][1 + keyIndex][0] = input.substring(input.indexOf("(") + 1, input.indexOf(")"));
+            commands[keyNum][1 + keyIndex][1] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
             keyIndex++;
             break;
 
-        }
+      }
     }
 
-    for (int i = 0; i <= 1 ; i++) {
-      for (int j = 0; j <= 2 ; j++) {
-        for (int k = 0; j <= 1 ; j++) {
-            System.out.print(commands[i][j][k] + " ");
-          }
-        }
-
-      System.out.println(); 
-    }
-
-    }
+    System.out.println(commands[0][0][0]);
+    System.out.println(commands[0][1][0]);
+    System.out.println(commands[0][2][0]);
+    System.out.println(commands[0][1][1]);
+    System.out.println(commands[0][2][1]);
 
   }
 }

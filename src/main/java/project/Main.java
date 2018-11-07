@@ -9,6 +9,10 @@ public class Main {
     System.out.println("Allegheny Trail - Choose Your Adventure");
     System.out.println("\nPlease choose an option:");
 
+    Scene sc = new Scene();
+
+    sc.readScene("00");
+    /*
     Scanner scanner = null;
     try {
       File saveFile = new File("saves/save.txt");
@@ -19,9 +23,9 @@ public class Main {
     }
 
     System.out.println("  -Exit");
+    */
 
 
-    
     /**
     Scan all folders to see if there are more than one adventure? Maybe?
 

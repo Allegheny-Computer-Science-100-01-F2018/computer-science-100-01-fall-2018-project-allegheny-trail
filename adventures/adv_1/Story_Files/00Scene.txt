@@ -1,7 +1,7 @@
-[Scene_Text]"You arrive in a forrest"
-[Key]"Observe"
-[Obj](Sky)"The stars are cool"
-[Obj](Trees)"They look hard"
-[Key]"Go"
-[Obj](left)"You go left"
-[Obj](right)"You go right"
+[Scene_Text]<You arrive in a forrest>
+[Key]<Observe>
+[Obj](Sky)<The stars are cool>
+[Obj](Trees)<They look hard>
+[Key]<Go>
+[Obj](left)<You go left>
+[Obj](right)<You go right>
