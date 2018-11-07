@@ -1,4 +1,4 @@
-[Scene_Text]<You arrive in a forrest>
+[Scene_Text]<You arrive in a forest>
 [Key]<Observe>
 [Obj](Sky)<The stars are cool>
 [Obj](Trees)<They look hard>
