@@ -18,7 +18,7 @@ public class Scene {
   public void readScene(String inputSceneId) {
     sceneId = inputSceneId;
 
-    System.out.println("DEBUG: Reading in Scene: " + sceneId);
+    System.out.println("DEBUG: Reading in Scene: " + sceneId + "scene.txt");
 
     Scanner scanner = null;
     try {

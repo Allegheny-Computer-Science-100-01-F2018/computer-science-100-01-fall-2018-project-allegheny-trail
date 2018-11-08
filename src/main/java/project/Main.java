@@ -38,7 +38,8 @@ public class Main {
               break;
 
           case "options":
-              //Options Stuff
+              Save sv = new Save();
+              sv.saveGame();
               inputOk = true;
               break;
 
