@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Config {
-  private String[][] vars = new String[1][20];
+  private String[][] vars = new String[2][20];
   private int startNum = 0;
 
   public Config() {
@@ -32,17 +32,22 @@ public class Config {
       vars[0][startNum] = input.substring(input.indexOf("(") + 1, input.indexOf(")"));
       vars[1][startNum] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
 
-      System.out.println(vars[startNum][startNum] + " | " + vars[startNum][startNum+1]);
+      System.out.println(vars[0][startNum] + " | " + vars[1][startNum]);
       startNum++;
     }
+  }
 
-    public int getVar(String varInput) {
-      for (i = 0; i < var.length; i++) {
-        if (var[0][i] == varInput) {
-          return var[1][i].toInt();
-          break;
-        }
+  public int getVar(String varInput) {
+    int rVar = -1;
+    System.out.println("vars.length: " + vars[0].length);
+    for (int i = 0; i < vars[0].length; i++) {
+      System.out.println("Loop #" + i);
+      System.out.println("Vars: " + vars[0][i]);
+      if (vars[0][i].equals(varInput)) {
+        rVar = Integer.valueOf(vars[1][i]);
+        break;
       }
     }
+    return rVar;
   }
 }
