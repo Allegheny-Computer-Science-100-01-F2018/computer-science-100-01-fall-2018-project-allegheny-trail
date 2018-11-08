@@ -28,18 +28,21 @@ public class Main {
       if (userInput != null) {
         switch (userInput) {
           case "newgame":
-              //New Game Stuff
+              //Warn it will delete saves
+              //Load configs
+              //run game
               inputOk = true;
               break;
 
           case "loadgame":
-              //Load Game Stuff
+              //Load save
+              //run game
               inputOk = true;
               break;
 
           case "options":
-              Save sv = new Save();
-              sv.saveGame();
+              //Open options menu
+
               inputOk = true;
               break;
 
@@ -61,35 +64,9 @@ public class Main {
       }
     }
 
+    //Run Game
     Scene sc = new Scene();
-
     sc.readScene("00");
-    /*
-
-    try {
-      File saveFile = new File("saves/save.txt");
-
-      System.out.println("  -Continue");
-    } catch (FileNotFoundException noFile) {
-      System.out.println("---No Save File Found---");
-    }
-
-    System.out.println("  -Exit");
-    */
-
-
-    /**
-    Scan all folders to see if there are more than one adventure? Maybe?
-
-    Scanner scanner = null;
-    try {
-      File gameOptions[] = new File("adventures/_/config.txt");
-      scanner = new Scanner(gameOptions[0]);
-    } catch (FileNotFoundException noFile) {
-      System.out.println("Unable to locate file");
-    }
-    */
-
   }
 
   public static void clearScreen() {
