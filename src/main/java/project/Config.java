@@ -29,13 +29,20 @@ public class Config {
 
       System.out.println("DEBUG: Line Read = " + input);
 
-      vars[startNum][startNum] = input.substring(input.indexOf("(") + 1, input.indexOf(")"));
-      vars[startNum][startNum+1] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
+      vars[0][startNum] = input.substring(input.indexOf("(") + 1, input.indexOf(")"));
+      vars[1][startNum] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
 
       System.out.println(vars[startNum][startNum] + " | " + vars[startNum][startNum+1]);
       startNum++;
+    }
 
-
+    public int getVar(String varInput) {
+      for (i = 0; i < var.length; i++) {
+        if (var[0][i] == varInput) {
+          return var[1][i].toInt();
+          break;
+        }
+      }
     }
   }
 }
