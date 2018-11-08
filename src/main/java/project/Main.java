@@ -12,6 +12,7 @@ public class Main {
     clearScreen(); //Flush Terminal
 
     while (inputOk == false) {
+      System.out.println("\n");
       System.out.println("+-----------------------------------------------------+");
       System.out.println("|       Allegheny Trail - Choose Your Adventure       |");
       System.out.println("|               Please type a selection:              |");
@@ -53,7 +54,7 @@ public class Main {
               break;
           default:
               clearScreen();
-              //System.out.println("Input Not Recognized!");
+              System.out.println("Input Not Recognized!");
               break;
         }
       }
