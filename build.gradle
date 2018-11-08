@@ -31,6 +31,7 @@ jar {
 apply plugin: 'application'
 mainClassName = 'project.Main'
 
+
 // perform checkstyle checking with the "gradle check" command
 apply plugin: 'checkstyle'
 checkstyle.toolVersion = '8.1'
@@ -39,4 +40,8 @@ checkstyle {
   maxWarnings = 0
   maxErrors = 0
   configFile = new File(rootDir, "config/checkstyle/google_checks.xml")
+}
+
+run {
+	standardInput = System.in
 }
