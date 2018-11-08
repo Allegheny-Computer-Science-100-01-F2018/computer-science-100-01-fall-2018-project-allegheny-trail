@@ -42,7 +42,9 @@ public class Main {
 
           case "options":
               //Open options menu
-
+              Config c = new Config();
+              c.readConfig();
+              System.out.println("hp: " + c.getVar("hp"));
               inputOk = true;
               break;
 
