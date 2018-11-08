@@ -1,14 +1,16 @@
 package project;
 
+import java.lang.*;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Scanner;
+
 
 public class Main {
   public static void main(String [] args) {
     String userInput = null;
     boolean inputOk = false;
     Scanner scan = new Scanner(System.in);
+
     clearScreen(); //Flush Terminal
 
     while (inputOk == false) {
@@ -19,8 +21,8 @@ public class Main {
       System.out.println("+-----------------------------------------------------+");
 
       userInput = scan.nextLine();
-      userInput.toLowerCase();
-      userInput.replace(" ", "");
+      userInput = userInput.toLowerCase();
+      userInput = userInput.replace(" ", "");
 
       System.out.println(userInput);
 
