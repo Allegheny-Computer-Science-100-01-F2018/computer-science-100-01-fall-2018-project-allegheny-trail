@@ -19,8 +19,8 @@ public class Main {
       System.out.println("+-----------------------------------------------------+");
 
       userInput = scan.nextLine();
-      userInput.toLowerCase();
-      userInput.replace(" ", "");
+      userInput = userInput.toLowerCase();
+      userInput = userInput.replace(" ", "");
 
       System.out.println(userInput);
 
