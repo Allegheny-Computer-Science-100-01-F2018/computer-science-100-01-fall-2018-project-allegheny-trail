@@ -1,7 +1,4 @@
-[Scene_Text]<You arrive in a forest>
-[Key]<Observe>
-[Obj](Sky)<The stars are cool>
-[Obj](Trees)<They look hard>
-[Key]<Go>
-[Obj](left)<You go left>
-[Obj](right)<You go right>
+[Scene_Text]<"You feel as though you are lost...">
+[Key]<Follow>
+[Obj](Left Path)<Dirt>
+[Obj](Right Path)<Mud>
