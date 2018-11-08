@@ -1,3 +1,4 @@
-[Var](hp)<100>
-[Var](bagSize)<3>
-[Var](dmgMulti)<1>
+(scene)<00>
+(hp)<100>
+(bagSize)<3>
+(dmgMulti)<1>
