@@ -1,0 +1,3 @@
+[Var](hp)<75>
+[Var](bagSize)<2>
+[Var](dmgMulti)<2>
