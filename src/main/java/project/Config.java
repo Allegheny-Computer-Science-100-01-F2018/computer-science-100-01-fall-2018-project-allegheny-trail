@@ -39,10 +39,10 @@ public class Config {
 
   public int getVar(String varInput) {
     int rVar = -1;
-    System.out.println("vars.length: " + vars[0].length);
+    //System.out.println("vars.length: " + vars[0].length);
     for (int i = 0; i < vars[0].length; i++) {
-      System.out.println("Loop #" + i);
-      System.out.println("Vars: " + vars[0][i]);
+      //System.out.println("Loop #" + i);
+      //System.out.println("Vars: " + vars[0][i]);
       if (vars[0][i].equals(varInput)) {
         rVar = Integer.valueOf(vars[1][i]);
         break;
