@@ -29,8 +29,8 @@ public class SceneActions {
       switch (userInput) {
         case "sky":
             //Examines the sky, this decision leads nowhere.
-            System.out.println("You look at the sky. It's twilight, and the stars
-            are starting to come out. It's beautiful. You acheive nothing by doing this.");
+            System.out.println("You look at the sky. It's twilight, and the stars" +
+            "are starting to come out. It's beautiful. You acheive nothing by doing this.");
             inputOk = true;
             break;
 
@@ -42,10 +42,10 @@ public class SceneActions {
 
         case "trees":
             //Examines the trees. Does nothing, but provide a bad pun.
-            System.out.println("Tree-ditionally the trees would not interest you.
-            However, there seem to be a Tree-lion, tree-angular, trees, all standing
-            like sen-trees. Its a beautiful coun-tree. \n\n\n I'm not sorry. \n You
-            were the one who chose to look at trees.");
+            System.out.println("Tree-ditionally the trees would not interest you." +
+            "However, there seem to be a Tree-lion, tree-angular, trees, all standing" +
+            "like sen-trees. Its a beautiful coun-tree. \n\n\n I'm not sorry. \n You" +
+            "were the one who chose to look at trees.");
             inputOk = true;
             break;
 
@@ -62,5 +62,7 @@ public class SceneActions {
         default:
             System.out.println("Input Not Recognized!");
             break;
+          }
+    }
   }
 }
