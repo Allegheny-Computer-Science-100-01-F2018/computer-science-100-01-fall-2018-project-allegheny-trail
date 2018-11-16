@@ -67,12 +67,5 @@ public class Scene {
           break;
       }
     }
-
-    System.out.println(commands[0][0][0]);
-    System.out.println(commands[0][1][0]);
-    System.out.println(commands[0][2][0]);
-    System.out.println(commands[0][1][1]);
-    System.out.println(commands[0][2][1]);
-
   }
 }
