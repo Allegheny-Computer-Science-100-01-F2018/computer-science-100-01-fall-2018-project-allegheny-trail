@@ -3,7 +3,7 @@ package project;
 import java.lang.*;
 import java.io.File;
 import java.io.FileNotFoundException;
-
+import java.util.Scanner;
 
 public class Main {
   public static void main(String [] args) {
@@ -15,20 +15,41 @@ public class Main {
 
     while (inputOk == false) {
       System.out.println("\n");
+      System.out.println("      _       _____     _____     ________    ______  ____  ____  ________  ____  _____  ____  ____ "
+          + "\n     / \\     |_   _|   |_   _|   |_   __  | .' ___  ||_   ||   _||_   __  ||_   \\|_   _||_  _||_  _|"
+          + "\n    / _ \\      | |       | |       | |_ \\_|/ .'   \\_|  | |__| |    | |_ \\_|  |   \\ | |    \\ \\  / / "
+          + "\n   / ___ \\     | |   _   | |   _   |  _| _ | |   ____  |  __  |    |  _| _   | |\\ \\| |     \\ \\/ /   "
+          + "\n _/ /   \\ \\_  _| |__/ | _| |__/ | _| |__/ |\\ `.___]  |_| |  | |_  _| |__/ | _| |_\\   |_    _|  |_   "
+          + "\n|____| |____||________||________||________| `._____.'|____||____||________||_____|\\____|  |______|     "
+          + "\n"
+          + "\n _________  _______          _       _____  _____     "
+          + "\n|  _   _  ||_   __ \\        / \\     |_   _||_   _|    "
+          + "\n|_/ | | \\_|  | |__) |      / _ \\      | |    | |      "
+          + "\n    | |      |  __ /      / ___ \\     | |    | |   _  "
+          + "\n   _| |_    _| |  \\ \\_  _/ /   \\ \\_  _| |_  _| |__/ | "
+          + "\n  |_____|  |____| |___||____| |____||_____||________| ");
       System.out.println("+-----------------------------------------------------+");
       System.out.println("|       Allegheny Trail - Choose Your Adventure       |");
-      System.out.println("|               Please type a selection:              |");
-      System.out.println("|       [New Game] [Load Game] [Options] [Exit]       |");
+      System.out.println("|                                                     |");
+      System.out.println("|       Please type a selection:                      |");
+      System.out.println("|                                                     |");
+      System.out.println("|       [ 1. | New Game  ]                            |");
+      System.out.println("|       [ 2. | Load Game ]                            |");
+      System.out.println("|       [ 3. | Options   ]                            |");
+      System.out.println("|       [ 4. | Exit      ]                            |");
       System.out.println("+-----------------------------------------------------+");
 
       userInput = scan.nextLine();
       userInput = userInput.toLowerCase();
       userInput = userInput.replace(" ", "");
+      userInput = userInput.replace(".", "");
 
       System.out.println(userInput);
 
       if (userInput != null) {
         switch (userInput) {
+          case "1":
+          case "new":
           case "newgame":
               //Warn it will delete saves
               //Load configs
@@ -36,12 +57,16 @@ public class Main {
               inputOk = true;
               break;
 
+          case "2":
+          case "load":
           case "loadgame":
               //Load save
               //run game
               inputOk = true;
               break;
 
+          case "3":
+          case "option":
           case "options":
               //Open options menu
               Config c = new Config();
@@ -50,6 +75,10 @@ public class Main {
               inputOk = true;
               break;
 
+          case "4":
+          case "e":
+          case "q":
+          case "quit":
           case "exit":
               clearScreen();
               inputOk = true;
