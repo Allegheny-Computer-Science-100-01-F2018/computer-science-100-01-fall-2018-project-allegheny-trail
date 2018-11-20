@@ -14,6 +14,7 @@ public class Main {
     clearScreen(); //Flush Terminal
 
     while (inputOk == false) {
+      System.out.println("\n");
       System.out.println("+-----------------------------------------------------+");
       System.out.println("|       Allegheny Trail - Choose Your Adventure       |");
       System.out.println("|               Please type a selection:              |");
@@ -29,17 +30,23 @@ public class Main {
       if (userInput != null) {
         switch (userInput) {
           case "newgame":
-              //New Game Stuff
+              //Warn it will delete saves
+              //Load configs
+              //run game
               inputOk = true;
               break;
 
           case "loadgame":
-              //Load Game Stuff
+              //Load save
+              //run game
               inputOk = true;
               break;
 
           case "options":
-              //Options Stuff
+              //Open options menu
+              Config c = new Config();
+              c.readConfig();
+              System.out.println("hp: " + c.getVar("hp"));
               inputOk = true;
               break;
 
@@ -55,41 +62,17 @@ public class Main {
               break;
           default:
               clearScreen();
-              //System.out.println("Input Not Recognized!");
+              System.out.println("Input Not Recognized!");
               break;
         }
       }
     }
 
+    //Run Game
     Scene sc = new Scene();
-
     sc.readScene("00");
-    /*
-
-    try {
-      File saveFile = new File("saves/save.txt");
-
-      System.out.println("  -Continue");
-    } catch (FileNotFoundException noFile) {
-      System.out.println("---No Save File Found---");
-    }
-
-    System.out.println("  -Exit");
-    */
-
-
-    /**
-    Scan all folders to see if there are more than one adventure? Maybe?
-
-    Scanner scanner = null;
-    try {
-      File gameOptions[] = new File("adventures/_/config.txt");
-      scanner = new Scanner(gameOptions[0]);
-    } catch (FileNotFoundException noFile) {
-      System.out.println("Unable to locate file");
-    }
-    */
-
+    Dictionary dc = new Dictionary();
+    dc.readDictionary("00");
   }
 
   public static void clearScreen() {

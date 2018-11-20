@@ -1,5 +1,5 @@
 # Five Ideas
-# Group members: Danny Ullrich, Max Boshaw, Caden Koscinski
+# Group members: Danny Ullrich, Maxwell Boshaw, Caden Koscinski, Zachary Canali
 
 1. Command line based choose your own adventure game
 Texted based adventure that supports infinite scalability through modular text file based story arcs.

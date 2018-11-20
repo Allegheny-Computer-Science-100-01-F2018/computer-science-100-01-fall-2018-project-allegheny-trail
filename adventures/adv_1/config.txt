@@ -1,1 +1,4 @@
-Adventure 1
+(scene)<00>
+(hp)<100>
+(bagSize)<3>
+(dmgMulti)<1>

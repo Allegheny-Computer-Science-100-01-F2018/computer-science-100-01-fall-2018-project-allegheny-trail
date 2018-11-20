@@ -1,0 +1,5 @@
+[Scene_Text]<"You are in a Forest. You feel as though you are lost...">
+[Key] Observe
+[Obj] Sky <Sky>
+[Obj] Ground <Ground>
+[Obj] Trees <Trees>
