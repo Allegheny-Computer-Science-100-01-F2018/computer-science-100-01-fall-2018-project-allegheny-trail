@@ -3,13 +3,14 @@ package project;
 import java.lang.*;
 import java.io.File;
 import java.io.FileNotFoundException;
-
+import java.util.Scanner;
 
 public class Main {
   public static void main(String [] args) {
     String userInput = null;
     boolean inputOk = false;
-    Input input = new Input();
+    //Input input = new Input();
+    Scanner scan = new Scanner(System.in);
 
     clearScreen(); //Flush Terminal
 
@@ -39,7 +40,7 @@ public class Main {
       System.out.println("|       [ 4. | Exit      ]                            |");
       System.out.println("+-----------------------------------------------------+");
 
-      userInput = input.getInput();
+      userInput = scan.nextLine();
       userInput = userInput.toLowerCase();
       userInput = userInput.replace(" ", "");
       userInput = userInput.replace(".", "");
@@ -100,8 +101,8 @@ public class Main {
     //Run Game
     Scene sc = new Scene();
     sc.readScene("00");
-    Dictionary dc = new Dictionary();
-    dc.readDictionary("00");
+    //Dictionary dc = new Dictionary();
+    //dc.readDictionary("00");
   }
 
   public static void clearScreen() {

@@ -1,4 +1,5 @@
-package project;
+
+//package project;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -17,7 +18,7 @@ public class Input {
   /** Method for getting user input.
   */
   public String getInput() {
-    return scan.nextLine();
+    return inputScan.nextLine();
   }
 
   public void initDictionary() {
@@ -62,7 +63,7 @@ public class Input {
   }
 
   public String parse(String input) {
-      Scanner scan = new Scanner(input).userDelimiter("\\s*");
+      Scanner scan = new Scanner(input);//.userDelimiter("\\s*");
 
       while (scan.hasNext()) {
         String in = scan.next();
@@ -87,10 +88,6 @@ public class Input {
         }
 
       }
-
+      return null;
   }
-
-
-
-
 }
