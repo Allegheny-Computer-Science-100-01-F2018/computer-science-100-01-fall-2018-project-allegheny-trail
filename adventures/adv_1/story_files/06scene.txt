@@ -1,5 +1,7 @@
 [Scene_Text]<While walking along the road you notice a group of mushrooms at the edge of the road. There are dozens, but one looks particularly delicious. It is small, red, and has multiple white dots. It looks delicious... \n Maybe you should take a bite?>
-[Key]<>
-[Obj](Eat)<You eat the Mushroom.>{07}
-[Obj](Keep)<You place the mushroom into your bag.>{}
-[Obj](Leave)<You leave that wonderful morsel to its own devices. You look back briefly over your shoulder... what could have been?>{10}
+[Key]<Eat>
+[Obj](Mushroom)<You eat the Mushroom.>{07}
+[Key]<Keep>
+[Obj](Mushroom)<You place the mushroom into your bag.>{}
+[Key]<Leave>
+[Obj](Mushroom)<You leave that wonderful morsel to its own devices. You look back briefly over your shoulder... what could have been?>{10}
