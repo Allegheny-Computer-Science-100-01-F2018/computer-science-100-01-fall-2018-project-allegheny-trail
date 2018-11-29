@@ -1,0 +1,5 @@
+[Scene_Text]<The small mushroom within the box is small, red, and has multiple white dots. It looks delicious... \n Maybe you should take a bite?>
+[Key]<>
+[Obj](Eat)<>||
+[Obj](Keep)<>||
+[Obj](Leave)<>||

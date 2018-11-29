@@ -1,0 +1,4 @@
+[Scene_Text]<It is remarkable! The crate that you had just opened was merely the outer shell of a smaller, far more interesting, crate. What secrets could it hold inside? Perhaps riches, a diamond tiara, the key to the city... Oh the possibilities are endless! Or maybe it holds another SMALLER box...\n DON'T LEAVE ME WAITING, OPEN IT>
+[Key]<>
+[Obj](Open)<You open the box and inside you find...>|03/04/05|
+[Obj](Leave)<Having no sense of adventure you continue on the path. After some time you begin to realize that you are back where you started. There is a fork in the road.>|01|
