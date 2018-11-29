@@ -60,6 +60,7 @@ public class Main {
               //System.out.println("hp: " + sc.getVar("hp"));
 
               //sc.readScene(sc.getVar("scene"));
+              sc.readScene("00");
 
               inputOk = true;
               break;

@@ -1,5 +1,5 @@
 [Scene_Text]<You are in a Forest. You feel as though you are lost...>
 [Key]<Observe>
-[Obj](Sky)<You look at the sky. It's twilight, and the stars are starting to come out. It's beautiful. You acheive nothing by doing this.>|01|
-[Obj](Ground)<Successful path. You WIN. This is a placeholder.>|02|
-[Obj](Trees)<Tree-ditionally the trees would not interest you. However, there seem to be a Tree-lion, tree-angular, trees, all standing like sen-trees. Its a beautiful coun-tree. \n\n\n I'm not sorry. \n You were the one who chose to look at trees.>|03|
+[Obj](Sky)<You look at the sky. It's twilight, and the stars are starting to come out. It's beautiful. You acheive nothing by doing this.>{01}
+[Obj](Ground)<Successful path. You WIN. This is a placeholder.>{02}
+[Obj](Trees)<Tree-ditionally the trees would not interest you. However, there seem to be a Tree-lion, tree-angular, trees, all standing like sen-trees. Its a beautiful coun-tree. \n\n\n I'm not sorry. \n You were the one who chose to look at trees.>{03}
