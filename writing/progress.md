@@ -3,10 +3,9 @@
 
 Config | Input | Main | Save | Scene |
 --- | --- | --- | --- | --- |
-a | - dict : String | a | a | a |
-a | - keyIndex : int | a | a | a |
-a | - keyNum : int | a | a | a |
-a | -  | a | a | a |
+'-' startNum : int | - dict : String | a | a | a |
+'-' vars : String | - keyIndex : int | a | a | a |
+- | - keyNum : int | a | a | a |
 --- | --- | --- | --- | --- |
 << constructor >> Config() | << constructor >> | b | b | b |
 '+' readConfig() | b | b | b | b |
