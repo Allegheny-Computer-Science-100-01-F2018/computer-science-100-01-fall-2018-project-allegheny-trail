@@ -102,7 +102,7 @@ public class Main {
 
     //while (1 == 1) {
       sc.printScene();
-      System.out.println(input.parse(input.getInput(), sc);
+      System.out.println(input.parse(input.getInput(), sc));
     //}
 
   }
