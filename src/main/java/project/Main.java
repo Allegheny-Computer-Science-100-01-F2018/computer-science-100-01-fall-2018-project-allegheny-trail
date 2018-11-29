@@ -57,11 +57,10 @@ public class Main {
               c.readConfig();
               //System.out.println("hp: " + c.getVar("hp"));
 
+              //Read in and display the scene.
               Scene sc = new Scene();
               sc.readScene(c.getVar("scene"));
-
-              Input input = new Input();
-              input.
+              sc.displayScene();
 
               inputOk = true;
               break;
