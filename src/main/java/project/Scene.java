@@ -69,7 +69,38 @@ public class Scene {
       }
     }
   }
+
   public void printScene() {
     System.out.println("\n" + sceneText);
+  }
+
+  public boolean checkObject(String commandIn, String objectIn) {
+    boolean commandAvailable = false;
+    boolean objectAvailable = false;
+    int checkCounter;
+    int checkCounter2;
+    while (commandAvailable == false && [checkCounter][0][0] != null) {
+      if (commandIn == commands[checkCounter][0][0]) {
+        commandAvailable = true;
+      } else {
+        checkCounter++;
+      }
+    }
+    if (commandAvailable == false) {
+      System.out.println("Command not recognized.");
+    } else {
+      while (objectAvailable == false && [checkCounter][checkCounter2][0] != null) {
+        if (objectIn == commands[checkCounter][checkCounter2][0]) {
+          objectAvailable = true;
+        } else {
+          checkCounter2++;
+        }
+        if (objectAvailable == false) {
+          System.out.println("Object not recognized.");
+        } else {
+          return true;
+        }
+      }
+    }
   }
 }
