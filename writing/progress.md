@@ -4,7 +4,7 @@
 | Input | Main | Scene |
 | --- | --- | --- |
 | - dict : String                   | + userInput : String | - sceneId : String |
-| - keyIndex : int                  | - inputOk : boolean  | - sceneText : String |
+| - keyIndex : int                  | + inputOk : boolean  | - sceneText : String |
 | - keyNum : int                    | - | - keyNum : int |
 |  - startNum : int                 | - | - keyIndex : int |
 |  - vars : String                  | - | - |
