@@ -1,0 +1,4 @@
+[Main]<Observe>
+[Syn](Examine)
+[Syn](Inspect)
+[Syn](Look)
