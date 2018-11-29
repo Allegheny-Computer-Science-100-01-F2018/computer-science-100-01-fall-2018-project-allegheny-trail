@@ -1,4 +1,4 @@
-[Scene_Text]<You are in a Forest. You feel as though you are lost...
+[Scene_Text]<You are in a Forest. You feel as though you are lost...>
 [Key]<Observe>
 [Obj](Sky)<You look at the sky. It's twilight, and the stars are starting to come out. It's beautiful. You acheive nothing by doing this.>|01|
 [Obj](Ground)<Successful path. You WIN. This is a placeholder.>|02|
