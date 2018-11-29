@@ -62,8 +62,8 @@ public class Input {
   }
 
   public String parse(String input) {
-      Scanner scan = new Scanner(input);//.userDelimiter("\\s*");
-
+      Scanner scan = new Scanner(input).userDelimiter(" ");
+      
       while (scan.hasNext()) {
         String in = scan.next();
         int key = 0;
