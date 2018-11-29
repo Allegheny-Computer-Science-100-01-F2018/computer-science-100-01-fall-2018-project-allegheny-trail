@@ -9,10 +9,9 @@
 |  - startNum : int                 | - | - keyIndex : int |
 |  - vars : String                  | - | - |
 | ---                               | --- | --- |
-| << constructor >> input()         | + clearScreen() | b |
-| + getInput() : String             | b | b |
-| + initDictionary()                | b | b |
-| + parse(String input) : String    | - | - |
-|  << constructor >> Config()       | - | - |
+| << constructor >> input()         | + clearScreen() | << constructor >> Scene() |
+| + getInput() : String             | - | + checkObject(String commandIn, String ObjectIn) : boolean |
+| + initDictionary()                | - | + printScene() |
+| + parse(String input) : String    | - | + readScene(String inputSceneId) |
 |  + readConfig()                   | - | - |
 |  + getVar(String varInput) : int  | - | - |
