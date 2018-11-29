@@ -79,7 +79,7 @@ public class Scene {
     boolean objectAvailable = false;
     int checkCounter;
     int checkCounter2;
-    while (commandAvailable == false && [checkCounter][0][0] != null) {
+    while (commandAvailable == false && commands[checkCounter][0][0] != null) {
       if (commandIn == commands[checkCounter][0][0]) {
         commandAvailable = true;
       } else {
@@ -89,7 +89,7 @@ public class Scene {
     if (commandAvailable == false) {
       System.out.println("Command not recognized.");
     } else {
-      while (objectAvailable == false && [checkCounter][checkCounter2][0] != null) {
+      while (objectAvailable == false && commands[checkCounter][checkCounter2][0] != null) {
         if (objectIn == commands[checkCounter][checkCounter2][0]) {
           objectAvailable = true;
         } else {
