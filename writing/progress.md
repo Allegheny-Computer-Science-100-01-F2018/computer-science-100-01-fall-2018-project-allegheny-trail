@@ -1,13 +1,12 @@
 # Progress report
 # Group members: Danny Ullrich, Maxwell Boshaw, Caden Koscinski, Zachary Canali
 
-Config | Input | Main | Save | Scene |
+Config | Input | Main | Scene |
 --- | --- | --- | --- | --- |
-'-' startNum : int | - dict : String | a | a | a |
-'-' vars : String | - keyIndex : int | a | a | a |
-= | - keyNum : int | a | a | a |
+'-' startNum : int | - dict : String  | + userInput : String | a |
+'-' vars : String  | - keyIndex : int | - inputOk : boolean  | a |
+                   | - keyNum : int   |                      | a |
 --- | --- | --- | --- | --- |
-<< constructor >> Config() | << constructor >> | b | b | b |
-'+' readConfig() | b | b | b | b |
-b | b | b | b | b |
-b | b | b | b | b |
+<< constructor >> Config() | << constructor >> | + clearScreen() | b |
+'+' readConfig()           | + getInput() : String  | b | b |
+                           | + initDictionary()     |
