@@ -55,11 +55,12 @@ public class Main {
               //Warn it will delete saves
               //Load configs
               //run game
+
               Scene sc = new Scene();
               sc.readScene("00");
 
               Input input = new Input();
-              input.
+
 
               inputOk = true;
               break;
