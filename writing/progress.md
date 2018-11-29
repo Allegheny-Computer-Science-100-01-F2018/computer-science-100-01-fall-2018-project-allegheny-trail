@@ -3,12 +3,12 @@
 
 Config | Input | Main | Save | Scene |
 --- | --- | --- | --- | --- |
-a | a | a | a | a |
-a | a | a | a | a |
-a | a | a | a | a |
-a | a | a | a | a |
+a | - dict : String | a | a | a |
+a | - keyIndex : int | a | a | a |
+a | - keyNum : int | a | a | a |
+a | -  | a | a | a |
 --- | --- | --- | --- | --- |
-b | b | b | b | b |
-b | b | b | b | b |
+<< constructor >> Config() | << constructor >> | b | b | b |
+'+' readConfig() | b | b | b | b |
 b | b | b | b | b |
 b | b | b | b | b |
