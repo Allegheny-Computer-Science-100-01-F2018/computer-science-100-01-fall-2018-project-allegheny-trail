@@ -60,7 +60,6 @@ public class Main {
               //Read in and display the scene.
               Scene sc = new Scene();
               sc.readScene(c.getVar("scene"));
-              sc.displayScene();
 
               inputOk = true;
               break;
@@ -101,8 +100,9 @@ public class Main {
       }
     }
 
-    while () {
-
+    while (1 == 1) {
+      sc.printScene();
+      
     }
 
   }
