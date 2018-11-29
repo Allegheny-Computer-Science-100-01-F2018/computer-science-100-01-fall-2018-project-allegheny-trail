@@ -1,13 +1,18 @@
 # Progress report
 # Group members: Danny Ullrich, Maxwell Boshaw, Caden Koscinski, Zachary Canali
 
-Config | Input | Main | Save | Scene |
---- | --- | --- | --- | --- |
-'-' startNum : int | - dict : String | a | a | a |
-'-' vars : String | - keyIndex : int | a | a | a |
-= | - keyNum : int | a | a | a |
---- | --- | --- | --- | --- |
-<< constructor >> Config() | << constructor >> | b | b | b |
-'+' readConfig() | b | b | b | b |
-b | b | b | b | b |
-b | b | b | b | b |
+| Input | Main | Scene |
+| --- | --- | --- |
+| - dict : String                   | + userInput : String | - sceneId : String |
+| - keyIndex : int                  | - inputOk : boolean  | - sceneText : String |
+| - keyNum : int                    | a | - keyNum : int |
+|  - startNum : int                 | - | - keyIndex : int |
+|  - vars : String                  | - | - |
+| ---                               | --- | --- |
+| << constructor >> input()         | + clearScreen() | b |
+| + getInput() : String             | b | b |
+| + initDictionary()                | b | b |
+| + parse(String input) : String    | - | - |
+|  << constructor >> Config()       | - | - |
+|  + readConfig()                   | - | - |
+|  + getVar(String varInput) : int  | - | - |
