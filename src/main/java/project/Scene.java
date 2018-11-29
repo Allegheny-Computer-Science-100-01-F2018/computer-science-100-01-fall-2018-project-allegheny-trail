@@ -77,6 +77,7 @@ public class Scene {
   public boolean checkObject(String commandIn, String objectIn) {
     boolean commandAvailable = false;
     boolean objectAvailable = false;
+    boolean status = false;
     int checkCounter = 0;
     int checkCounter2 = 0;
     while (commandAvailable == false && commands[checkCounter][0][0] != null) {
@@ -98,9 +99,11 @@ public class Scene {
         if (objectAvailable == false) {
           System.out.println("Object not recognized.");
         } else {
-          return true;
+          status = true;
         }
       }
     }
+    // TODO Remove Placeholder
+    return status;
   }
 }

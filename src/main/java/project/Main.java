@@ -56,10 +56,10 @@ public class Main {
               //Read in and display the scene.
 
               //Read in config file and vars
-              sc.readConfig();
+              //sc.readConfig();
               //System.out.println("hp: " + sc.getVar("hp"));
 
-              sc.readScene(sc.getVar("scene"));
+              //sc.readScene(sc.getVar("scene"));
 
               inputOk = true;
               break;
