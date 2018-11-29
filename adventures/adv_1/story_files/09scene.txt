@@ -1,4 +1,4 @@
-[Scene_Text]<>
+[Scene_Text]<YOU HAVE DIED>
 [Key]<>
 [Obj]()<>{}
 [Obj]()<>{}
