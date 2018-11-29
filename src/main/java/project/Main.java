@@ -9,7 +9,7 @@ public class Main {
   public static void main(String [] args) {
     String userInput = null;
     boolean inputOk = false;
-    //Input input = new Input();
+    Input input = new Input();
     Scanner scan = new Scanner(System.in);
 
     clearScreen(); //Flush Terminal
@@ -52,15 +52,15 @@ public class Main {
           case "1":
           case "new":
           case "newgame":
-              //Warn it will delete saves
-              //Load configs
-              //run game
+              //Read in config file and vars
+              Config c = new Config();
+              c.readConfig();
+              //System.out.println("hp: " + c.getVar("hp"));
 
+              //Read in and display the scene.
               Scene sc = new Scene();
-              sc.readScene("00");
-
-              Input input = new Input();
-
+              sc.readScene(c.getVar("scene"));
+              sc.displayScene();
 
               inputOk = true;
               break;
@@ -76,11 +76,7 @@ public class Main {
           case "3":
           case "option":
           case "options":
-              //Open options menu
-              Config c = new Config();
-              c.readConfig();
-              System.out.println("hp: " + c.getVar("hp"));
-              inputOk = true;
+
               break;
 
           case "4":
@@ -104,6 +100,11 @@ public class Main {
         }
       }
     }
+
+    while () {
+
+    }
+
   }
 
   public static void clearScreen() {
