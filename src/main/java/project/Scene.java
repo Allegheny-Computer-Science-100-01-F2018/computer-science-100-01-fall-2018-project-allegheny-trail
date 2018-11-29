@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Scene {
   private String sceneId;
-  private String[][][] commands = new String[20][20][2];
+  private String[][][] commands = new String[20][20][3];
   private String sceneText;
   private int keyNum = 0;
   private int keyIndex = 0;
@@ -59,6 +59,7 @@ public class Scene {
         case ("[Obj]"):
             commands[keyNum][1 + keyIndex][0] = input.substring(input.indexOf("(") + 1, input.indexOf(")"));
             commands[keyNum][1 + keyIndex][1] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
+            commands[keyNum][1 + keyIndex][2] = input.substring(input.indexOf("{") + 1, input.indexOf("}"));
             keyIndex++;
             break;
 
@@ -67,5 +68,8 @@ public class Scene {
           break;
       }
     }
+  }
+  public void printScene() {
+    System.out.println("\n" + sceneText);
   }
 }
