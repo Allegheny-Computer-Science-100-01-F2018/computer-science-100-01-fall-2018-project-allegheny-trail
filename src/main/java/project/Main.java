@@ -7,10 +7,10 @@ import java.util.Scanner;
 
 public class Main {
   public static void main(String [] args) {
+    private boolean inputOk = false;
     String userInput = null;
-    boolean inputOk = false;
     Input input = new Input();
-    Scanner scan = new Scanner(System.in);
+    //Scanner scan = new Scanner(System.in);
 
     clearScreen(); //Flush Terminal
 
@@ -40,7 +40,7 @@ public class Main {
       System.out.println("|       [ 4. | Exit      ]                            |");
       System.out.println("+-----------------------------------------------------+");
 
-      userInput = scan.nextLine();
+      userInput = input.getInput();
       userInput = userInput.toLowerCase();
       userInput = userInput.replace(" ", "");
       userInput = userInput.replace(".", "");
@@ -52,13 +52,12 @@ public class Main {
           case "1":
           case "new":
           case "newgame":
-              //Read in config file and vars
-              Config c = new Config();
-              c.readConfig();
-              //System.out.println("hp: " + c.getVar("hp"));
-
               //Read in and display the scene.
               Scene sc = new Scene();
+              //Read in config file and vars
+              sc.readConfig();
+              //System.out.println("hp: " + sc.getVar("hp"));
+
               sc.readScene(c.getVar("scene"));
 
               inputOk = true;
@@ -102,7 +101,7 @@ public class Main {
 
     while (1 == 1) {
       sc.printScene();
-      
+      input.parse(input.getInput());
     }
 
   }
