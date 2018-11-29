@@ -1,4 +1,4 @@
-[Scene_Text]<>
+[Scene_Text]<Continuing your journey...>
 [Key]<>
 [Obj]()<>{}
 [Obj]()<>{}

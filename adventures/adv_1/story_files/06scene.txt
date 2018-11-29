@@ -2,4 +2,4 @@
 [Key]<>
 [Obj](Eat)<You eat the Mushroom.>{07}
 [Obj](Keep)<You place the mushroom into your bag.>{}
-[Obj](Leave)<You leave that wonderful morsel to its own devices. You look back briefly over your shoulder... what could have been?>{}
+[Obj](Leave)<You leave that wonderful morsel to its own devices. You look back briefly over your shoulder... what could have been?>{10}
