@@ -13,9 +13,12 @@ repositories {
 }
 
 // specify the use of gradle version 4.1
-task wrapper(type: Wrapper) {
+wrapper {
   gradleVersion = '4.1'
 }
+//task wrapper(type: Wrapper) {
+//  gradleVersion = '4.1'
+//}
 
 // declare values to place in the manifest file in the JAR
 jar {
