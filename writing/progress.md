@@ -5,8 +5,8 @@ Config | Input | Main | Scene |
 --- | --- | --- | --- | --- |
 '-' startNum : int | - dict : String  | + userInput : String | a |
 '-' vars : String  | - keyIndex : int | - inputOk : boolean  | a |
-        --           | - keyNum : int   |       --               | a |
+a | - keyNum : int | a | a |
 --- | --- | --- | --- | --- |
 << constructor >> Config() | << constructor >> | + clearScreen() | b |
-'+' readConfig()           | + getInput() : String  | b | b |
-                           | + initDictionary()     |
+'+' readConfig() | + getInput() : String | b | b |
+b | + initDictionary() | b | b |
