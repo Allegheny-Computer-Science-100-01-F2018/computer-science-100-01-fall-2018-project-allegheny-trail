@@ -77,8 +77,8 @@ public class Scene {
   public boolean checkObject(String commandIn, String objectIn) {
     boolean commandAvailable = false;
     boolean objectAvailable = false;
-    int checkCounter;
-    int checkCounter2;
+    int checkCounter = 0;
+    int checkCounter2 = 0;
     while (commandAvailable == false && commands[checkCounter][0][0] != null) {
       if (commandIn == commands[checkCounter][0][0]) {
         commandAvailable = true;

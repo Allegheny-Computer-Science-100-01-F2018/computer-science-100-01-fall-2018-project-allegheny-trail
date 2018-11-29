@@ -14,6 +14,9 @@ public class Input {
   private String[][] vars = new String[2][20];
   private int startNum = 0;
 
+  //TODO Remove Placeholder
+  String command;
+
 
   public Input() {
     inputScan = new Scanner(System.in);
@@ -69,6 +72,10 @@ public class Input {
   public String parse(String input, Scene sceneIn) {
       Scanner scan = new Scanner(input).useDelimiter(" ");
 
+      String in2;
+      String obj = "Sky";
+      String commandString = "";
+
       while (scan.hasNext()) {
         String in = scan.next();
         int key = 0;
@@ -96,10 +103,11 @@ public class Input {
           System.out.println("I didn't understand, can you rephrase that?");
         } else {
           while (scan.hasNext()) {
-            String in2 = scan.next();
-            String obj = "";
+            in2 = scan.next();
+            // TODO Remove Placeholder
+            obj = "Sky";
 
-            if (sceneIn.checkObject(in2) == true) {
+            if (sceneIn.checkObject(in2, obj) == true) {
               obj = in2;
               break;
             }
@@ -108,8 +116,11 @@ public class Input {
       }
 
       if (command != "" && obj != "") {
-        return ("[" + command + "]<" + obj + ">");
-        //returns "[command]<obj>"
+        // TODO Enable original code
+        // return ("[" + command + "]<" + obj + ">");
+        // returns "[command]<obj>"
+        // TODO Remove Placeholder
+        return commandString;
       } else {
         return null;
       }
