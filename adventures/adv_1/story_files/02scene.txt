@@ -1,0 +1,4 @@
+[Scene_Text]<After some time you find an abandoned crate.>
+[Key]<>
+[Obj](Open)<You open the box and inside you find...>{03/04/05}
+[Obj](Leave)<Having no sense of adventure you continue on the path. After some time you begin to realize that you are back where you started.>{01}
