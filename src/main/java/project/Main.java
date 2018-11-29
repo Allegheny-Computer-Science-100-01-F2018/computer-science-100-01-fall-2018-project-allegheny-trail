@@ -7,9 +7,10 @@ import java.util.Scanner;
 
 public class Main {
   public static void main(String [] args) {
-    private boolean inputOk = false;
+    boolean inputOk = false;
     String userInput = null;
     Input input = new Input();
+    Scene sc = new Scene();
     //Scanner scan = new Scanner(System.in);
 
     clearScreen(); //Flush Terminal
@@ -53,12 +54,12 @@ public class Main {
           case "new":
           case "newgame":
               //Read in and display the scene.
-              Scene sc = new Scene();
+
               //Read in config file and vars
               sc.readConfig();
               //System.out.println("hp: " + sc.getVar("hp"));
 
-              sc.readScene(c.getVar("scene"));
+              sc.readScene(sc.getVar("scene"));
 
               inputOk = true;
               break;
@@ -99,10 +100,10 @@ public class Main {
       }
     }
 
-    while (1 == 1) {
+    //while (1 == 1) {
       sc.printScene();
-      input.parse(input.getInput());
-    }
+      System.out.println(input.parse(input.getInput(), sc);
+    //}
 
   }
 
