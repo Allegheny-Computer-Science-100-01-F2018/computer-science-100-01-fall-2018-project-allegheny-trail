@@ -70,11 +70,18 @@ public class Input {
   }
 
   public String parse(String input, Scene sceneIn) {
-      Scanner scan = new Scanner(input).useDelimiter(" ");
+      Scanner scan = new Scanner(input);
 
-      String in2;
+      String in2 = "";
       String obj = "";
       String commandString = "";
+
+      System.out.println("DEBUG: " + input);
+      while (scan.hasNext()) {
+        System.out.println("DEBUG: " + scan.next());
+      }
+      String check = dict[0][0];
+      System.out.println("DEBUG: " + check);
 
       while (scan.hasNext()) {
         String in = scan.next();
@@ -82,46 +89,47 @@ public class Input {
         int count = 0;
         String command = "";
 
-        while (dict[key][count] != null) {
-          if (dict[key][count] == in) {
-            command = dict[key][0];
-            break;
-          }
-
-          if (dict[key][count+1] != null) {
-            count++;
-          } else if (dict[key+1][0] != null){
-            count = 0;
-            key++;
-          } else {
-            System.out.println("I didn't understand, can you rephrase that?");
-            command = "";
-            break;
-          }
-        }
-
-        if (command != "") {
-          while (scan.hasNext()) {
-            obj = scan.next();
-
-            if (sceneIn.checkObject(command, obj) == true) {
-              obj = in;
-              break;
-            }
-          }
-        }
+        // TODO Note dis shit
+        boolean proceed = false;
 
 
-      }
+//        while (dict[key][count] != null) {
+//          if (dict[key][count] == in) {
+//            command = dict[key][0];
+//            break;
+//          }
+//
+//          if (dict[key][count+1] != null) {
+//            count++;
+//          } else if (dict[key+1][0] != null){
+//            count = 0;
+//            key++;
+//          } else {
+//            System.out.println("I didn't understand, can you rephrase that?");
+//            command = "";
+//          }
+//        }
 
-      if (command != "" && obj != "") {
-        // TODO Enable original code
-        return ("[" + command + "]<" + obj + ">");
-        // returns "[command]<obj>"
-      } else {
-        return null;
-      }
-  }
+//        if (command != "") {
+//          while (scan.hasNext()) {
+//            obj = scan.next();
+
+//            if (sceneIn.checkObject(command, obj) == true) {
+//              obj = in;
+//              break;
+//            }
+//          }
+//        }
+//      }
+
+//      System.out.println("DEBUG: " + command);
+
+//      if (command != "" && obj != "") {
+//        return ("[" + command + "]<" + obj + ">");
+//      } else {
+//        return null;
+//      }
+//  }
 
   //Config Stuff
   public void readConfig() {
