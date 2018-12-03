@@ -103,7 +103,6 @@ public class Scene {
         }
       }
     }
-    // TODO Remove Placeholder
     return status;
   }
 }
