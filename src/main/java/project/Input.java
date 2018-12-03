@@ -69,28 +69,32 @@ public class Input {
     }
   }
 
-  public String parse(String input, Scene sceneIn) {
-      Scanner scan = new Scanner(input);
+public String parse(String input, Scene sceneIn) {
+  
+}
 
-      String in2 = "";
-      String obj = "";
-      String commandString = "";
+//  public String parse(String input, Scene sceneIn) {
+//      Scanner scan = new Scanner(input);
 
-      System.out.println("DEBUG: " + input);
-      while (scan.hasNext()) {
-        System.out.println("DEBUG: " + scan.next());
-      }
-      String check = dict[0][0];
-      System.out.println("DEBUG: " + check);
+//      String in2 = "";
+//      String obj = "";
+//      String commandString = "";
 
-      while (scan.hasNext()) {
-        String in = scan.next();
-        int key = 0;
-        int count = 0;
-        String command = "";
+//      System.out.println("DEBUG: " + input);
+//      while (scan.hasNext()) {
+//        System.out.println("DEBUG: " + scan.next());
+//      }
+//      String check = dict[0][0];
+//      System.out.println("DEBUG: " + check);
+
+//      while (scan.hasNext()) {
+//        String in = scan.next();
+//        int key = 0;
+//        int count = 0;
+//        String command = "";
 
         // TODO Note dis shit
-        boolean proceed = false;
+//        boolean proceed = false;
 
 
 //        while (dict[key][count] != null) {
