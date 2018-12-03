@@ -73,7 +73,7 @@ public class Input {
       Scanner scan = new Scanner(input).useDelimiter(" ");
 
       String in2;
-      String obj = "Sky";
+      String obj = "";
       String commandString = "";
 
       while (scan.hasNext()) {
@@ -84,7 +84,7 @@ public class Input {
 
         while (dict[key][count] != null) {
           if (dict[key][count] == in) {
-            command = command + dict[key][0];
+            command = dict[key][0];
             break;
           }
 
@@ -94,33 +94,30 @@ public class Input {
             count = 0;
             key++;
           } else {
-            //Command not found.
+            System.out.println("I didn't understand, can you rephrase that?");
+            command = "";
             break;
           }
         }
 
-        if (command == "") {
-          System.out.println("I didn't understand, can you rephrase that?");
-        } else {
+        if (command != "") {
           while (scan.hasNext()) {
-            in2 = scan.next();
-            // TODO Remove Placeholder
-            obj = "Sky";
+            obj = scan.next();
 
-            if (sceneIn.checkObject(in2, obj) == true) {
-              obj = in2;
+            if (sceneIn.checkObject(command, obj) == true) {
+              obj = in;
               break;
             }
           }
         }
+
+
       }
 
       if (command != "" && obj != "") {
         // TODO Enable original code
-        // return ("[" + command + "]<" + obj + ">");
+        return ("[" + command + "]<" + obj + ">");
         // returns "[command]<obj>"
-        // TODO Remove Placeholder
-        return commandString;
       } else {
         return null;
       }
