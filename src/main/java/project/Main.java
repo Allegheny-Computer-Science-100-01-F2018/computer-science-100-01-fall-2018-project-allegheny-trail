@@ -12,6 +12,7 @@ public class Main {
     Input input = new Input();
     Scene sc = new Scene(input);
     boolean debug = false;
+    boolean game = false;
     //Scanner scan = new Scanner(System.in);
 
     clearScreen(); //Flush Terminal
@@ -36,10 +37,9 @@ public class Main {
       System.out.println("|                                                     |");
       System.out.println("|       Please type a selection:                      |");
       System.out.println("|                                                     |");
-      System.out.println("|       [ 1. | New Game  ]                            |");
-      System.out.println("|       [ 2. | Load Game ]                            |");
-      System.out.println("|       [ 3. | Options   ]                            |");
-      System.out.println("|       [ 4. | Exit      ]                            |");
+      System.out.println("|       [ 1. | Play ]                                 |");
+      System.out.println("|       [ 2. | Exit ]                                 |");
+      System.out.println("|                                                     |");
       System.out.println("+-----------------------------------------------------+");
 
       userInput = input.getInput();
@@ -52,35 +52,13 @@ public class Main {
       if (userInput != null) {
         switch (userInput) {
           case "1":
-          case "new":
+          case "play":
           case "newgame":
-              //Read in and display the scene.
-
-              //Read in config file and vars
-              //sc.readConfig();
-              //System.out.println("hp: " + sc.getVar("hp"));
-
-              //sc.readScene(sc.getVar("scene"));
               sc.readScene("00");
-
+              game = true;
               inputOk = true;
               break;
-
           case "2":
-          case "load":
-          case "loadgame":
-              //Load save
-              //run game
-              inputOk = true;
-              break;
-
-          case "3":
-          case "option":
-          case "options":
-
-              break;
-
-          case "4":
           case "e":
           case "q":
           case "quit":
@@ -102,6 +80,7 @@ public class Main {
       }
     }
 
+    while (game) {
       input.initDictionary();
       sc.printScene();
       //Debug == System.out.println(input.parse(input.getInput(), sc));
@@ -117,10 +96,11 @@ public class Main {
         System.out.println("DEBUG: " + initInput);
         System.out.println("DEBUG: " + preInput);
       }
+    }
   }
 
   public static void clearScreen() {
-    //System.out.print("\033[H\033[2J");
+    System.out.print("\033[H\033[2J");
     System.out.flush();
   }
 
