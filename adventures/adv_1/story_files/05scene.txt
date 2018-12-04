@@ -2,4 +2,4 @@
 [Key]<OPEN>
 [Obj](OPEN)<You open the box and inside you find...>{03/04/05}
 [Key]<LEAVE>
-[Obj](AREA)<Having no sense of adventure you continue on the path. After some time you begin to realize that you are back where you started. There is a fork in the road.>{01}
+[Obj](AREA)<Having no sense of adventure you continue on the path. After some time you begin to realize that you are back where you started. There is a fork in the road.>{goto[01]}
