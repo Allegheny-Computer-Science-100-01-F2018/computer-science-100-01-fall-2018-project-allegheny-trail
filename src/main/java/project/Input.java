@@ -46,23 +46,23 @@ public class Input {
 
       switch (input.substring(input.indexOf("["), input.indexOf("]") + 1)) {
         case ("[Main]"):
-            if (dict[keyNum][0] == null) {
-              dict[keyNum][0] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
-            } else {
-              keyNum++;
-              dict[keyNum][0] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
-              keyIndex = 0;
-            }
-            break;
+        if (dict[keyNum][0] == null) {
+          dict[keyNum][0] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
+        } else {
+          keyNum++;
+          dict[keyNum][0] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
+          keyIndex = 0;
+        }
+        break;
 
         case ("[Syn]"):
-            dict[keyNum][1 + keyIndex] = input.substring(input.indexOf("(") + 1, input.indexOf(")"));
-            keyIndex++;
-            break;
+        dict[keyNum][1 + keyIndex] = input.substring(input.indexOf("(") + 1, input.indexOf(")"));
+        keyIndex++;
+        break;
 
         default:
-          //None
-          break;
+        //None
+        break;
       }
     }
   }
@@ -80,6 +80,12 @@ public class Input {
       System.out.println("DEBUG: Testing for " + inputCommand);
       if (sc.checkCommand(inputCommand, inputObject) == true) {
         proceed = false;
+      } else {
+        String checkResult = checkDictionary(inputCommand);
+        if (checkResult.contains("Invalid") == false) {
+          proceed = false;
+          inputCommand = checkResult;
+        }
       }
     }
 
@@ -110,70 +116,102 @@ public class Input {
   }
 
 
-// TODO HELLO THERE
+  // TODO HELLO THERE
 
 
-//  public String parse(String input, Scene sceneIn) {
-//      Scanner scan = new Scanner(input);
+  //  public String parse(String input, Scene sceneIn) {
+  //      Scanner scan = new Scanner(input);
 
-//      String in2 = "";
-//      String obj = "";
-//      String commandString = "";
+  //      String in2 = "";
+  //      String obj = "";
+  //      String commandString = "";
 
-//      System.out.println("DEBUG: " + input);
-//      while (scan.hasNext()) {
-//        System.out.println("DEBUG: " + scan.next());
-//      }
-//      String check = dict[0][0];
-//      System.out.println("DEBUG: " + check);
+  //      System.out.println("DEBUG: " + input);
+  //      while (scan.hasNext()) {
+  //        System.out.println("DEBUG: " + scan.next());
+  //      }
+  //      String check = dict[0][0];
+  //      System.out.println("DEBUG: " + check);
 
-//      while (scan.hasNext()) {
-//        String in = scan.next();
-//        int key = 0;
-//        int count = 0;
-//        String command = "";
+  //      while (scan.hasNext()) {
+  //        String in = scan.next();
+  //        int key = 0;
+  //        int count = 0;
+  //        String command = "";
 
-        // TODO Note dis shit
-//        boolean proceed = false;
+  // TODO Note dis shit
+  //        boolean proceed = false;
 
 
-//        while (dict[key][count] != null) {
-//          if (dict[key][count] == in) {
-//            command = dict[key][0];
-//            break;
-//          }
-//
-//          if (dict[key][count+1] != null) {
-//            count++;
-//          } else if (dict[key+1][0] != null){
-//            count = 0;
-//            key++;
-//          } else {
-//            System.out.println("I didn't understand, can you rephrase that?");
-//            command = "";
-//          }
-//        }
+  //        while (dict[key][count] != null) {
+  //          if (dict[key][count] == in) {
+  //            command = dict[key][0];
+  //            break;
+  //          }
+  //
+  //          if (dict[key][count+1] != null) {
+  //            count++;
+  //          } else if (dict[key+1][0] != null){
+  //            count = 0;
+  //            key++;
+  //          } else {
+  //            System.out.println("I didn't understand, can you rephrase that?");
+  //            command = "";
+  //          }
+  //        }
 
-//        if (command != "") {
-//          while (scan.hasNext()) {
-//            obj = scan.next();
+  //        if (command != "") {
+  //          while (scan.hasNext()) {
+  //            obj = scan.next();
 
-//            if (sceneIn.checkObject(command, obj) == true) {
-//              obj = in;
-//              break;
-//            }
-//          }
-//        }
-//      }
+  //            if (sceneIn.checkObject(command, obj) == true) {
+  //              obj = in;
+  //              break;
+  //            }
+  //          }
+  //        }
+  //      }
 
-//      System.out.println("DEBUG: " + command);
+  //      System.out.println("DEBUG: " + command);
 
-//      if (command != "" && obj != "") {
-//        return ("[" + command + "]<" + obj + ">");
-//      } else {
-//        return null;
-//      }
-//  }
+  //      if (command != "" && obj != "") {
+  //        return ("[" + command + "]<" + obj + ">");
+  //      } else {
+  //        return null;
+  //      }
+  //  }
+
+  public String checkDictionary(String inputCommand) {
+    boolean proceed = true;
+    int checkCounter = 0;
+    int checkCounter2 = 0;
+
+    while (proceed == true) {
+      if (dict[checkCounter][checkCounter2] != null && !inputCommand.contains(dict[checkCounter][checkCounter2])) {
+        checkCounter2++;
+      } else {
+        if (dict[checkCounter][checkCounter2] == null) {
+          checkCounter2 = 0;
+          checkCounter++;
+        } else if (inputCommand.contains(dict[checkCounter][checkCounter2])) {
+          proceed = false;
+        }
+        /*
+        checkCounter2 = 0;
+        checkCounter++;
+        if (dict[checkCounter][checkCounter2] == null) {
+          proceed = false;
+        }*/
+      }
+    }
+    if (dict[checkCounter][checkCounter2] != null) {
+      inputCommand = dict[checkCounter][0];
+    } else {
+      inputCommand = "invalid";
+    }
+    return inputCommand;
+  }
+
 
   //Config Stuff
   public void readConfig() {
