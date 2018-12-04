@@ -74,11 +74,7 @@ public class Scene {
         commands[keyNum][1 + keyIndex][1] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
         commands[keyNum][1 + keyIndex][2] = input.substring(input.indexOf("{") + 1, input.indexOf("}"));
         keyIndex++;
-        break;sceneText = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
-
-            if (debug) {
-              System.out.println("DEBUG: Scene Text = " + sceneText);
-            }
+        break;
 
         default:
         //None
