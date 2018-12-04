@@ -57,7 +57,7 @@ public class Input {
 
         case ("[Syn]"):
         dict[keyNum][1 + keyIndex] = input.substring(input.indexOf("(") + 1, input.indexOf(")"));
-        keyIndex++;[" + inputCommand + "]<
+        keyIndex++;
         break;
 
         default:
@@ -75,21 +75,21 @@ public class Input {
     Boolean proceed = true;
 
     while (scan.hasNext() && proceed == true) {
-      inputCommand = scan.next();[" + inputCommand + "]<
+      inputCommand = scan.next();
       inputObject = inputCommand;
       System.out.println("DEBUG: Testing for " + inputCommand);
       if (sc.checkCommand(inputCommand, inputObject) == true) {
         proceed = false;
       } else {
         String checkResult = checkDictionary(inputCommand);
-        if (checkResult.contains("INVALID") == false) {
+        if (!checkResult.equals("INVALID")) {
           proceed = false;
           inputCommand = checkResult;
         }
       }
     }
 
-    if (sc.checkCommand(inputCommand, inputObject) == false) {
+    if (sc.checkCommand(inputCommand, inputObject) == false || inputCommand.equals("INVALID")) {
       System.out.println("I didn't catch that, can you rephrase that?");
     } else {
       inputObject = "";
@@ -101,7 +101,7 @@ public class Input {
           proceed = false;
         }
       }
-      
+
       if (sc.checkCommand(inputCommand, inputObject) == true) {
         System.out.println("\"" + input + "\"" + " Is a valid command");
       } else {
@@ -186,23 +186,30 @@ public class Input {
     boolean proceed = false;
     int checkCounter = 0;
     int checkCounter2 = 0;
+    String inputStr = inputCommand;
+
+    System.out.println("Dict.length: " + dict.length + " | Dict[0].length: " + dict[0].length);
 
     while (proceed == false) {
-      if (inputCommand.contains(dict[checkCounter][checkCounter2])) {
+      if (inputStr.equals(dict[checkCounter][checkCounter2])) {
         inputCommand = dict[checkCounter][checkCounter2];
         proceed = true;
-      } else if (checkCounter2 + 1 <= dict[1].length) {
-        checkCounter2++;
-      } else if (checkCounter + 1 <= dict.length) {
-        checkCounter++;
-        checkCounter2 = 0;
+      } else if (checkCounter2 + 1 < dict[0].length) {
+        if (dict[checkCounter][checkCounter2 + 1] != "") {
+          checkCounter2++;
+        }
+      } else if (checkCounter + 1 < dict.length) {
+        if (dict[checkCounter + 1][0] != "") {
+          checkCounter++;
+          checkCounter2 = 0;
+        }
       } else {
-        inputCommand = "INVALID";
+        inputStr = "INVALID";
         proceed = true;
       }
     }
 
-    return inputCommand;
+    return inputStr;
   }
 
   //Config Stuff

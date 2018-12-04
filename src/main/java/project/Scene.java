@@ -3,6 +3,8 @@ package project;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.Random;
+
 
 public class Scene {
   private String sceneId;
@@ -147,15 +149,29 @@ public class Scene {
         String c = commands[checkCounter][checkCounter2][2];
         switch(c.substring(0, c.indexOf("["))) {
           case "goto":
-              String sId = c.substring(c.indexOf("[") + 1, c.indexOf("]"));
+              sceneId = c.substring(c.indexOf("[") + 1, c.indexOf("]"));
               clearAll();
-              sceneId = sId;
               readScene(sceneId);
               clearScreen();
               printScene();
               break;
           case "rand":
-              //do Stuff
+              int optionNum = c.length() - c.replace("[", "").length();
+              String[] data = new String[optionNum];
+              Random rand = new Random();
+              int randomNum = rand.nextInt(optionNum);
+
+              //rand[03][04][05]
+              for(int i = 0; i < optionNum; i++) {
+                data[i] = c.substring(c.indexOf("[") + 1, c.indexOf("]"));
+                c = c.substring(c.indexOf("]") + 1, c.length());
+              }
+
+              sceneId = data[randomNum];
+              clearAll();
+              readScene(sceneId);
+              clearScreen();
+              printScene();
               break;
         }
         break;
