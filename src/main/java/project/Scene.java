@@ -10,11 +10,11 @@ public class Scene {
   private String sceneText;
   private int keyNum = 0;
   private int keyIndex = 0;
-  private Input input;
+  private Input inputMain;
   private boolean debug = false;
 
   public Scene(Input inputObj) {
-    input = inputObj;
+    inputMain = inputObj;
   }
 
   public void readScene(String inputSceneId) {
@@ -42,11 +42,11 @@ public class Scene {
 
       switch (input.substring(input.indexOf("["), input.indexOf("]") + 1)) {
         case ("[Scene_Text]"):
-        sceneText = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
+            sceneText = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
 
-        if (debug) {
-          System.out.println("DEBUG: Scene Text = " + sceneText);
-        }
+            if (debug) {
+              System.out.println("DEBUG: Scene Text = " + sceneText);
+            }
         break;
 
         case ("[Key]"):
@@ -74,7 +74,11 @@ public class Scene {
         commands[keyNum][1 + keyIndex][1] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
         commands[keyNum][1 + keyIndex][2] = input.substring(input.indexOf("{") + 1, input.indexOf("}"));
         keyIndex++;
-        break;
+        break;sceneText = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
+
+            if (debug) {
+              System.out.println("DEBUG: Scene Text = " + sceneText);
+            }
 
         default:
         //None
@@ -165,7 +169,7 @@ public class Scene {
 
   public void askContinue() {
     System.out.println("Press ENTER to continue.");
-    input.getInput();
+    inputMain.getInput();
   }
 
   public void clearAll() {
