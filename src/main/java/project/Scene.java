@@ -84,6 +84,8 @@ public class Scene {
   }
 
   public void printScene() {
+    clearScreen();
+    System.out.println("[   Current Scene: " + sceneId + "   |   Allegheny Trail   |   Type \"EXIT\" at any time to end the game.   ]");
     System.out.println("\n" + sceneText);
   }
 
