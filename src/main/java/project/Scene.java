@@ -36,36 +36,36 @@ public class Scene {
 
       switch (input.substring(input.indexOf("["), input.indexOf("]") + 1)) {
         case ("[Scene_Text]"):
-            sceneText = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
-            //System.out.println("DEBUG: Scene Text = " + sceneText);
-            break;
+        sceneText = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
+        //System.out.println("DEBUG: Scene Text = " + sceneText);
+        break;
 
         case ("[Key]"):
-            if (commands[keyNum][0][0] == null) {
-              commands[keyNum][0][0] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
-              //System.out.println("DEBUG: Array Empty, inserting:" + input.substring(input.indexOf("<") + 1, input.indexOf(">")));
-            } else {
-              keyNum++;
-              commands[keyNum][0][0] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
-              keyIndex = 0;
+        if (commands[keyNum][0][0] == null) {
+          commands[keyNum][0][0] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
+          //System.out.println("DEBUG: Array Empty, inserting:" + input.substring(input.indexOf("<") + 1, input.indexOf(">")));
+        } else {
+          keyNum++;
+          commands[keyNum][0][0] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
+          keyIndex = 0;
 
-              //System.out.println("DEBUG: Array not empty");
-              //System.out.println("DEBUG: Inserting: " + input.substring(input.indexOf("<") + 1, input.indexOf(">")));
-              //System.out.println("DEBUG: Keynum = " + keyNum);
-              //System.out.println("DEBUG: KeyIndex Reset");
-            }
-            break;
+          //System.out.println("DEBUG: Array not empty");
+          //System.out.println("DEBUG: Inserting: " + input.substring(input.indexOf("<") + 1, input.indexOf(">")));
+          //System.out.println("DEBUG: Keynum = " + keyNum);
+          //System.out.println("DEBUG: KeyIndex Reset");
+        }
+        break;
 
         case ("[Obj]"):
-            commands[keyNum][1 + keyIndex][0] = input.substring(input.indexOf("(") + 1, input.indexOf(")"));
-            commands[keyNum][1 + keyIndex][1] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
-            commands[keyNum][1 + keyIndex][2] = input.substring(input.indexOf("{") + 1, input.indexOf("}"));
-            keyIndex++;
-            break;
+        commands[keyNum][1 + keyIndex][0] = input.substring(input.indexOf("(") + 1, input.indexOf(")"));
+        commands[keyNum][1 + keyIndex][1] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
+        commands[keyNum][1 + keyIndex][2] = input.substring(input.indexOf("{") + 1, input.indexOf("}"));
+        keyIndex++;
+        break;
 
         default:
-          //None
-          break;
+        //None
+        break;
       }
     }
   }
@@ -74,14 +74,15 @@ public class Scene {
     System.out.println("\n" + sceneText);
   }
 
-  public boolean checkObject(String commandIn, String objectIn) {
+  public boolean checkCommand(String commandIn, String objectIn) {
     boolean commandAvailable = false;
     boolean objectAvailable = false;
     boolean status = false;
     int checkCounter = 0;
     int checkCounter2 = 0;
+
     while (commandAvailable == false && commands[checkCounter][0][0] != null) {
-      if (commandIn == commands[checkCounter][0][0]) {
+      if (commandIn.contains(commands[checkCounter][0][0])) {
         commandAvailable = true;
       } else {
         checkCounter++;
@@ -91,16 +92,16 @@ public class Scene {
       System.out.println("Command not recognized.");
     } else {
       while (objectAvailable == false && commands[checkCounter][checkCounter2][0] != null) {
-        if (objectIn == commands[checkCounter][checkCounter2][0]) {
+        if (objectIn.contains(commands[checkCounter][checkCounter2][0])) {
           objectAvailable = true;
         } else {
           checkCounter2++;
         }
-        if (objectAvailable == false) {
-          System.out.println("Object not recognized.");
-        } else {
-          status = true;
-        }
+      }
+      if (objectAvailable == false) {
+        System.out.println("Object not recognized.");
+      } else {
+        status = true;
       }
     }
     return status;

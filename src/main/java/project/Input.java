@@ -14,8 +14,6 @@ public class Input {
   private String[][] vars = new String[2][20];
   private int startNum = 0;
 
-  //TODO Remove Placeholder
-  String command;
 
 
   public Input() {
@@ -69,10 +67,19 @@ public class Input {
     }
   }
 
-public String parse(String input, Scene sceneIn) {
-  
-}
-
+  public String parse(String input, Scene sceneIn) {
+    Scanner scan = new Scanner(input.toUpperCase());
+    Scene sc = sceneIn;
+    String inputCommand = scan.next();
+    String inputObject = scan.next();
+    System.out.println("DEBUG: Testing for " + inputCommand + " and " + inputObject);
+    if (sc.checkCommand(inputCommand, inputObject) == true) {
+      System.out.println("DEBUG: PASS");
+    } else {
+      System.out.println("DEBUG: FAIL");
+    }
+    return inputCommand;
+  }
 //  public String parse(String input, Scene sceneIn) {
 //      Scanner scan = new Scanner(input);
 
