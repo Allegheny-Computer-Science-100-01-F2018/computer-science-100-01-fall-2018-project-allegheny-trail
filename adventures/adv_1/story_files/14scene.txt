@@ -1,5 +1,6 @@
-[Scene_Text]<YOU HAVE DIED>
-[Key]<>
-[Obj]()<>{goto[]}
-[Obj]()<>{goto[]}
+[Scene_Text]<Special Inn Text>
+[Key]<SEARCH>
+[Obj](ROOM)<>{goto[]}
+[Obj](PEOPLE)<>{goto[]}
+[Key]<LEAVE>
 [Obj]()<>{goto[]}
