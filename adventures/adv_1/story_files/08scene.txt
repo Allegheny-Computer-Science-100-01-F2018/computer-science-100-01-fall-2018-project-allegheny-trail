@@ -2,4 +2,4 @@
 [Key]<Go>
 [Obj](Continue)<You continue on your journey, and attempt to shake the thought of mushrooms from your head.>{10}
 [Obj](Back)<You have lost your way...>{01}
-[Obj]()<>{}
+
