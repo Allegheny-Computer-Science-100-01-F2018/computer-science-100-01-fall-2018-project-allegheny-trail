@@ -171,7 +171,7 @@ public class Scene {
   }
 
   public void clearAll() {
-    commands = new String[commands.length][commands[1].length][commands[2].length];
+    String[][][] commands = new String[20][20][3];
   }
 
   public static void clearScreen() {
