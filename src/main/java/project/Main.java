@@ -10,7 +10,8 @@ public class Main {
     boolean inputOk = false;
     String userInput = null;
     Input input = new Input();
-    Scene sc = new Scene();
+    Scene sc = new Scene(input);
+    boolean debug = false;
     //Scanner scan = new Scanner(System.in);
 
     clearScreen(); //Flush Terminal
@@ -103,19 +104,25 @@ public class Main {
 
       input.initDictionary();
       sc.printScene();
-      // TODO Debug == System.out.println(input.parse(input.getInput(), sc));
+      //Debug == System.out.println(input.parse(input.getInput(), sc));
       String initInput = input.getInput();
       initInput = initInput.toUpperCase();
-      System.out.println("DEBUG: " + initInput);
+
 
       String preInput = input.parse(initInput, sc);
-      System.out.println("DEBUG: " + preInput);
+
+      sc.runLogic(preInput);
+
+      if (debug) {
+        System.out.println("DEBUG: " + initInput);
+        System.out.println("DEBUG: " + preInput);
+      }
   }
 
   public static void clearScreen() {
-    System.out.print("\033[H\033[2J");
+    //System.out.print("\033[H\033[2J");
     System.out.flush();
-   }
+  }
 
 
 }
