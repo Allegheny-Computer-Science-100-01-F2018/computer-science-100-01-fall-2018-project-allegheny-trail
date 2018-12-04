@@ -14,8 +14,6 @@ public class Input {
   private String[][] vars = new String[2][20];
   private int startNum = 0;
 
-  //TODO Remove Placeholder
-  String command;
 
 
   public Input() {
@@ -70,61 +68,114 @@ public class Input {
   }
 
   public String parse(String input, Scene sceneIn) {
-      Scanner scan = new Scanner(input).useDelimiter(" ");
+    Scanner scan = new Scanner(input.toUpperCase());
+    Scene sc = sceneIn;
+    String inputCommand = "";
+    String inputObject = "";
+    Boolean proceed = true;
 
-      String in2;
-      String obj = "Sky";
-      String commandString = "";
-
-      while (scan.hasNext()) {
-        String in = scan.next();
-        int key = 0;
-        int count = 0;
-        String command = "";
-
-        while (dict[key][count] != null) {
-          if (dict[key][count] == in) {
-            command = command + dict[key][0];
-            break;
-          }
-
-          if (dict[key][count+1] != null) {
-            count++;
-          } else if (dict[key+1][0] != null){
-            count = 0;
-            key++;
-          } else {
-            //Command not found.
-            break;
-          }
-        }
-
-        if (command == "") {
-          System.out.println("I didn't understand, can you rephrase that?");
-        } else {
-          while (scan.hasNext()) {
-            in2 = scan.next();
-            // TODO Remove Placeholder
-            obj = "Sky";
-
-            if (sceneIn.checkObject(in2, obj) == true) {
-              obj = in2;
-              break;
-            }
-          }
+    while (sc.checkCommand(inputCommand, inputObject) == false && scan.hasNext() && proceed == true) {
+      inputCommand = scan.next();
+      inputObject = inputCommand;
+      System.out.println("DEBUG: Testing for " + inputCommand);
+      if (sc.checkCommand(inputCommand, inputObject) == true) {
+        proceed = false;
+      }
+    }
+    if (sc.checkCommand(inputCommand, inputObject) == false) {
+      System.out.println("Please enter a different input");
+    } else {
+      inputObject = "";
+      proceed = true;
+      while (sc.checkCommand(inputCommand, inputObject) == false && scan.hasNext() && proceed == true) {
+        inputObject = scan.next();
+        System.out.println("DEBUG: Testing for " + inputCommand + " and " + inputObject);
+        if (sc.checkCommand(inputCommand, inputObject) == true) {
+          proceed = false;
         }
       }
-
-      if (command != "" && obj != "") {
-        // TODO Enable original code
-        // return ("[" + command + "]<" + obj + ">");
-        // returns "[command]<obj>"
-        // TODO Remove Placeholder
-        return commandString;
+      if (sc.checkCommand(inputCommand, inputObject) == true) {
+        System.out.println("\"" + input + "\"" + " Is a valid command");
       } else {
-        return null;
+        System.out.println("\"" + input + "\"" + " Is not a valid command");
       }
+    }
+
+
+    //System.out.println("DEBUG: Testing for " + inputCommand + " and " + inputObject);
+    //if (sc.checkCommand(inputCommand, inputObject) == true) {
+    //  System.out.println("DEBUG: PASS");
+    //} else {
+    //  System.out.println("DEBUG: FAIL");
+
+    return inputCommand;
   }
+
+
+// TODO HELLO THERE
+
+
+//  public String parse(String input, Scene sceneIn) {
+//      Scanner scan = new Scanner(input);
+
+//      String in2 = "";
+//      String obj = "";
+//      String commandString = "";
+
+//      System.out.println("DEBUG: " + input);
+//      while (scan.hasNext()) {
+//        System.out.println("DEBUG: " + scan.next());
+//      }
+//      String check = dict[0][0];
+//      System.out.println("DEBUG: " + check);
+
+//      while (scan.hasNext()) {
+//        String in = scan.next();
+//        int key = 0;
+//        int count = 0;
+//        String command = "";
+
+        // TODO Note dis shit
+//        boolean proceed = false;
+
+
+//        while (dict[key][count] != null) {
+//          if (dict[key][count] == in) {
+//            command = dict[key][0];
+//            break;
+//          }
+//
+//          if (dict[key][count+1] != null) {
+//            count++;
+//          } else if (dict[key+1][0] != null){
+//            count = 0;
+//            key++;
+//          } else {
+//            System.out.println("I didn't understand, can you rephrase that?");
+//            command = "";
+//          }
+//        }
+
+//        if (command != "") {
+//          while (scan.hasNext()) {
+//            obj = scan.next();
+
+//            if (sceneIn.checkObject(command, obj) == true) {
+//              obj = in;
+//              break;
+//            }
+//          }
+//        }
+//      }
+
+//      System.out.println("DEBUG: " + command);
+
+//      if (command != "" && obj != "") {
+//        return ("[" + command + "]<" + obj + ">");
+//      } else {
+//        return null;
+//      }
+//  }
 
   //Config Stuff
   public void readConfig() {
