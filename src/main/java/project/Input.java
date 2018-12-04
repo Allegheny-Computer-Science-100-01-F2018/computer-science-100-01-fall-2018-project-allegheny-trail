@@ -82,7 +82,7 @@ public class Input {
         proceed = false;
       } else {
         String checkResult = checkDictionary(inputCommand);
-        if (checkResult.contains("Invalid") == false) {
+        if (checkResult.contains("INVALID") == false) {
           proceed = false;
           inputCommand = checkResult;
         }
@@ -182,36 +182,27 @@ public class Input {
   //  }
 
   public String checkDictionary(String inputCommand) {
-    boolean proceed = true;
+    boolean proceed = false;
     int checkCounter = 0;
     int checkCounter2 = 0;
 
-    while (proceed == true) {
-      if (dict[checkCounter][checkCounter2] != null && !inputCommand.contains(dict[checkCounter][checkCounter2])) {
+    while (proceed == false) {
+      if (inputCommand.contains(dict[checkCounter][checkCounter2])) {
+        inputCommand = dict[checkCounter][checkCounter2];
+        proceed = true;
+      } else if (checkCounter2 + 1 <= dict[1].length) {
         checkCounter2++;
-      } else {
-        if (dict[checkCounter][checkCounter2] == null) {
-          checkCounter2 = 0;
-          checkCounter++;
-        } else if (inputCommand.contains(dict[checkCounter][checkCounter2])) {
-          proceed = false;
-        }
-        /*
-        checkCounter2 = 0;
+      } else if (checkCounter + 1 <= dict.length) {
         checkCounter++;
-        if (dict[checkCounter][checkCounter2] == null) {
-          proceed = false;
-        }*/
+        checkCounter2 = 0;
+      } else {
+        inputCommand = "INVALID";
+        proceed = true;
       }
     }
-    if (dict[checkCounter][checkCounter2] != null) {
-      inputCommand = dict[checkCounter][0];
-    } else {
-      inputCommand = "invalid";
-    }
+
     return inputCommand;
   }
-
 
   //Config Stuff
   public void readConfig() {
