@@ -101,11 +101,15 @@ public class Main {
       }
     }
 
-    //while (1 == 1) {
+      input.initDictionary();
       sc.printScene();
-      System.out.println(input.parse(input.getInput(), sc));
-    //}
+      // TODO Debug === System.out.println(input.parse(input.getInput(), sc));
+      String initInput = input.getInput();
+      String initInput2 = initInput.toUpperCase();
+      System.out.println("DEBUG: " + initInput2);
 
+      String preInput = input.parse(initInput2, sc);
+      System.out.println("DEBUG: " + preInput);
   }
 
   public static void clearScreen() {
