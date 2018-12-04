@@ -1,4 +1,4 @@
 [Scene_Text]<Oh wait. You are standing on a road. You look ahead and notice that there is a fork in the road.>
-[Key]<Go>
-[Obj](Left)<You take the path to the left...>{02}
-[Obj](Right)<You take the path to the right...>{0?}
+[Key]<GO>
+[Obj](LEFT)<You take the path to the left...>{02}
+[Obj](RIGHT)<You take the path to the right...>{06}
