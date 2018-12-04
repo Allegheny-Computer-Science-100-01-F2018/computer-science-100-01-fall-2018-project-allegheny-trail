@@ -74,7 +74,7 @@ public class Input {
     String inputObject = "";
     Boolean proceed = true;
 
-    while (sc.checkCommand(inputCommand, inputObject) == false && scan.hasNext() && proceed == true) {
+    while (scan.hasNext() && proceed == true) {
       inputCommand = scan.next();
       inputObject = inputCommand;
       System.out.println("DEBUG: Testing for " + inputCommand);
@@ -82,12 +82,13 @@ public class Input {
         proceed = false;
       }
     }
+
     if (sc.checkCommand(inputCommand, inputObject) == false) {
-      System.out.println("Please enter a different input");
+      System.out.println("I didn't catch that, can you rephrase that?");
     } else {
       inputObject = "";
       proceed = true;
-      while (sc.checkCommand(inputCommand, inputObject) == false && scan.hasNext() && proceed == true) {
+      while (scan.hasNext() && proceed) {
         inputObject = scan.next();
         System.out.println("DEBUG: Testing for " + inputCommand + " and " + inputObject);
         if (sc.checkCommand(inputCommand, inputObject) == true) {
@@ -101,14 +102,11 @@ public class Input {
       }
     }
 
-
-    //System.out.println("DEBUG: Testing for " + inputCommand + " and " + inputObject);
-    //if (sc.checkCommand(inputCommand, inputObject) == true) {
-    //  System.out.println("DEBUG: PASS");
-    //} else {
-    //  System.out.println("DEBUG: FAIL");
-
-    return inputCommand;
+    if (inputCommand != "" && inputObject != "") {
+      return ("[" + inputCommand + "]<" + inputObject + ">");
+    } else {
+      return null;
+    }
   }
 
 

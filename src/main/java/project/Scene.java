@@ -81,24 +81,25 @@ public class Scene {
     int checkCounter = 0;
     int checkCounter2 = 0;
 
-    while (commandAvailable == false && commands[checkCounter][0][0] != null) {
+    while (!commandAvailable && commands[checkCounter][0][0] != null) {
       if (commandIn.contains(commands[checkCounter][0][0])) {
         commandAvailable = true;
       } else {
         checkCounter++;
       }
     }
-    if (commandAvailable == false) {
+    if (!commandAvailable) {
       System.out.println("Command not recognized.");
     } else {
-      while (objectAvailable == false && commands[checkCounter][checkCounter2][0] != null) {
+      while (!objectAvailable && commands[checkCounter][checkCounter2][0] != null) {
         if (objectIn.contains(commands[checkCounter][checkCounter2][0])) {
           objectAvailable = true;
         } else {
           checkCounter2++;
         }
       }
-      if (objectAvailable == false) {
+
+      if (!objectAvailable) {
         System.out.println("Object not recognized.");
       } else {
         status = true;
@@ -106,4 +107,6 @@ public class Scene {
     }
     return status;
   }
+
+  
 }
