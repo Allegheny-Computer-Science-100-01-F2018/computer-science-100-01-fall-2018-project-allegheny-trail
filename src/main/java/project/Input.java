@@ -101,8 +101,12 @@ public class Input {
         System.out.println("\"" + input + "\"" + " Is not a valid command");
       }
     }
-    
-    return inputCommand;
+
+    if (inputCommand != "" && inputObject != "") {
+      return ("[" + inputCommand + "]<" + inputObject + ">");
+    } else {
+      return null;
+    }
   }
 
 

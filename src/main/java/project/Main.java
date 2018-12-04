@@ -103,12 +103,12 @@ public class Main {
 
       input.initDictionary();
       sc.printScene();
-      // TODO Debug === System.out.println(input.parse(input.getInput(), sc));
+      // TODO Debug == System.out.println(input.parse(input.getInput(), sc));
       String initInput = input.getInput();
-      String initInput2 = initInput.toUpperCase();
-      System.out.println("DEBUG: " + initInput2);
+      initInput = initInput.toUpperCase();
+      System.out.println("DEBUG: " + initInput);
 
-      String preInput = input.parse(initInput2, sc);
+      String preInput = input.parse(initInput, sc);
       System.out.println("DEBUG: " + preInput);
   }
 
