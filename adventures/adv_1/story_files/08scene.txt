@@ -1,5 +1,5 @@
 [Scene_Text]<You wake up in a pool of sweat, surrounded by those sinfully tempting mushrooms. Where are you again? Oh yes. You were walking along the road.>
 [Key]<GO>
-[Obj](CONTINUE)<You continue on your journey, and attempt to shake the thought of mushrooms from your head.>{10}
-[Obj](BACK)<You have lost your way...>{01}
+[Obj](CONTINUE)<You continue on your journey, and attempt to shake the thought of mushrooms from your head.>{goto[10]}
+[Obj](BACK)<You have lost your way...>{goto[01]}
 

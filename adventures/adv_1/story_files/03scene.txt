@@ -1,4 +1,4 @@
 [Scene_Text]<Nothing!>
 [Key]<>
-[Obj]()<Having found nothing of interest you continue on the path. After some time you begin to realize that you are back where you started.>{01}
+[Obj]()<Having found nothing of interest you continue on the path. After some time you begin to realize that you are back where you started.>{goto[01]}
 [Obj]()<>{}
