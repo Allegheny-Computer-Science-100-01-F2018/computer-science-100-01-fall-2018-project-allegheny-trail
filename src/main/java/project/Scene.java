@@ -128,7 +128,7 @@ public class Scene {
     return status;
   }
 
-  public void runLogic(String commandIn) {
+  /**public void runLogic(String commandIn) {
     int checkCounter = 0;
     int checkCounter2 = 0;
     String key = commandIn.substring(commandIn.indexOf("[") + 1, commandIn.indexOf("]"));
@@ -173,7 +173,7 @@ public class Scene {
   public void clearAll() {
     String[][][] commands = new String[20][20][3];
   }
-
+*/
   public static void clearScreen() {
     System.out.print("\033[H\033[2J");
     System.out.flush();

@@ -81,10 +81,10 @@ public class Input {
       if (sc.checkCommand(inputCommand, inputObject) == true) {
         proceed = false;
       } else {
-        String checkResult = checkDictionary(inputCommand);
-        if (checkResult.contains("INVALID") == false) {
+        inputCommand = checkDictionary(inputCommand);
+        inputObject = inputCommand;
+        if (sc.checkCommand(inputCommand, inputObject) == true) {
           proceed = false;
-          inputCommand = checkResult;
         }
       }
     }
@@ -94,15 +94,15 @@ public class Input {
     } else {
       inputObject = "";
       proceed = true;
-      while (scan.hasNext() && proceed) {
+      while (scan.hasNext() && proceed == true) {
         inputObject = scan.next();
         System.out.println("DEBUG: Testing for " + inputCommand + " and " + inputObject);
-        if (sc.checkCommand(inputCommand, inputObject) == true) {
+        if (sc.checkCommand(inputCommand, inputObject) == true && inputCommand.contains(inputObject) == false) {
           proceed = false;
         }
       }
 
-      if (sc.checkCommand(inputCommand, inputObject) == true) {
+      if (sc.checkCommand(inputCommand, inputObject) == true && inputCommand.contains(inputObject) == false) {
         System.out.println("\"" + input + "\"" + " Is a valid command");
       } else {
         System.out.println("\"" + input + "\"" + " Is not a valid command");
@@ -184,10 +184,13 @@ public class Input {
 
   public String checkDictionary(String inputCommand) {
     boolean proceed = false;
+    boolean synFound = true;
     int checkCounter = 0;
     int checkCounter2 = 0;
+    String checkResult = inputCommand;
 
-    while (proceed == false) {
+    System.out.println("DEBUG DICT: " + dict[checkCounter][checkCounter2 + 2]);
+    /**while (proceed == false) {
       if (inputCommand.contains(dict[checkCounter][checkCounter2])) {
         inputCommand = dict[checkCounter][checkCounter2];
         proceed = true;
@@ -200,9 +203,26 @@ public class Input {
         inputCommand = "INVALID";
         proceed = true;
       }
-    }
+    }*/
 
-    return inputCommand;
+    while (checkResult.contains(dict[checkCounter][checkCounter2 + 1]) == false && proceed == false) {
+      if (dict[checkCounter][checkCounter2 + 1] != null) {
+        checkCounter2++;
+      } else {
+        checkCounter2 = 0;
+        if (dict[checkCounter + 1][checkCounter2 + 1] != null) {
+          checkCounter++;
+        } else {
+          System.out.println("No synonyms found.");
+          synFound = false;
+          proceed = true;
+        }
+      }
+    }
+    if (synFound == true) {
+      checkResult = dict[checkCounter][0];
+    }
+    return checkResult;
   }
 
   //Config Stuff
