@@ -112,7 +112,7 @@ public class Input {
     if (inputCommand != "" && inputObject != "") {
       return ("[" + inputCommand + "]<" + inputObject + ">");
     } else {
-      return null;
+      return "INVALID";
     }
   }
 

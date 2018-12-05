@@ -13,7 +13,7 @@ public class Scene {
   private int keyNum = 0;
   private int keyIndex = 0;
   private Input inputMain;
-  private boolean debug = false;
+  private boolean debug = true;
 
   public Scene(Input inputObj) {
     inputMain = inputObj;
@@ -21,6 +21,7 @@ public class Scene {
 
   public void readScene(String inputSceneId) {
     sceneId = inputSceneId;
+    //String[][][] commands = new String[20][20][3];
 
     if (debug) {
       System.out.println("DEBUG: Reading in Scene: " + sceneId + "scene.txt");
@@ -44,11 +45,11 @@ public class Scene {
 
       switch (input.substring(input.indexOf("["), input.indexOf("]") + 1)) {
         case ("[Scene_Text]"):
-            sceneText = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
+        sceneText = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
 
-            if (debug) {
-              System.out.println("DEBUG: Scene Text = " + sceneText);
-            }
+        if (debug) {
+          System.out.println("DEBUG: Scene Text = " + sceneText);
+        }
         break;
 
         case ("[Key]"):
@@ -83,6 +84,11 @@ public class Scene {
         break;
       }
     }
+
+
+    for(int i = 0; i < commands.length; i++) {
+      System.out.println("commands[" + i + "][0][0] = " + commands[i][0][0]);
+    }
   }
 
   public void printScene() {
@@ -92,24 +98,15 @@ public class Scene {
 
     String commandsList = "";
     for(int i = 0; i < commands.length; i++) {
-      System.out.println("ARRAY " + commands[i][0][0]);
-      if (!commands[i][0][0].equals("")) {
-        if (i == 0) {
-          commandsList = "[   ";
-        }
-
-        commandsList = commandsList + "]   [" + commands[i][0][0];
+      //System.out.println("ARRAY " + commands[i][0][0]);
+      if (commands[i][0][0] != null && !commands[i][0][0].equals("")) {
+        commandsList = commandsList + "[" + commands[i][0][0] + "]   ";
       } else {
-        if (commandsList.equals("")) {
-          commandsList = "   ]";
-        } else {
-          commandsList = commandsList + "]";
-          break;
-        }
+        break;
       }
     }
 
-    System.out.println("[   Available Commands:   " + commandsList + "   ]");
+    System.out.println("\n[   Available Commands:   " + commandsList + "]");
   }
 
   public boolean checkCommand(String commandIn, String objectIn) {
@@ -118,6 +115,8 @@ public class Scene {
     boolean status = false;
     int checkCounter = 0;
     int checkCounter2 = 0;
+
+    System.out.println("checkCommand(" + commandIn + ", " + objectIn + ");");
 
     while (!commandAvailable && commands[checkCounter][0][0] != null) {
       if (commandIn.contains(commands[checkCounter][0][0])) {
@@ -157,47 +156,54 @@ public class Scene {
     String key = commandIn.substring(commandIn.indexOf("[") + 1, commandIn.indexOf("]"));
     String obj = commandIn.substring(commandIn.indexOf("<") + 1, commandIn.indexOf(">"));
 
-    while (commands[checkCounter][0][0] != null) {
+    while (commands[checkCounter][0][0] != null && checkCommand(key, obj) != false) {
       if (key.contains(commands[checkCounter][0][0])) {
-        while(!obj.contains(commands[checkCounter][checkCounter2][0])) {
+        while(commands[checkCounter][checkCounter2][0] != null && !obj.contains(commands[checkCounter][checkCounter2][0])) {
           checkCounter2++;
         }
-
         //Print Text
         System.out.println(commands[checkCounter][checkCounter2][1]);
         askContinue();
 
         String c = commands[checkCounter][checkCounter2][2];
-        switch(c.substring(0, c.indexOf("["))) {
-          case "goto":
-              sceneId = c.substring(c.indexOf("[") + 1, c.indexOf("]"));
-              clearAll();
-              readScene(sceneId);
-              clearScreen();
-              printScene();
-              break;
-          case "rand":
-              int optionNum = c.length() - c.replace("[", "").length();
-              String[] data = new String[optionNum];
-              Random rand = new Random();
-              int randomNum = rand.nextInt(optionNum);
 
-              //rand[03][04][05]
-              for(int i = 0; i < optionNum; i++) {
-                data[i] = c.substring(c.indexOf("[") + 1, c.indexOf("]"));
-                c = c.substring(c.indexOf("]") + 1, c.length());
-              }
+        if (c != null && !c.equals("")) {
+          switch(c.substring(0, c.indexOf("["))) {
+            case "goto":
+                sceneId = c.substring(c.indexOf("[") + 1, c.indexOf("]"));
+                clearAll();
+                readScene(sceneId);
+                clearScreen();
+                //printScene();
+                break;
+            case "rand":
+                int optionNum = c.length() - c.replace("[", "").length();
+                String[] data = new String[optionNum];
+                Random rand = new Random();
+                int randomNum = rand.nextInt(optionNum);
 
-              sceneId = data[randomNum];
-              clearAll();
-              readScene(sceneId);
-              clearScreen();
-              printScene();
-              break;
+                //rand[03][04][05]
+                for(int i = 0; i < optionNum; i++) {
+                  data[i] = c.substring(c.indexOf("[") + 1, c.indexOf("]"));
+                  c = c.substring(c.indexOf("]") + 1, c.length());
+                }
+
+                sceneId = data[randomNum];
+                clearAll();
+                readScene(sceneId);
+                clearScreen();
+                //printScene();
+                break;
+          }
+
+          break;
         }
-        break;
       } else {
         checkCounter++;
+      }
+
+      if (checkCommand(key, obj) == false) {
+        System.out.println("I didn't catch that, could you rephrase that?");
       }
     }
   }
@@ -208,7 +214,7 @@ public class Scene {
   }
 
   public void clearAll() {
-    String[][][] commands = new String[20][20][3];
+    commands = new String[20][20][3];
   }
 
   public static void clearScreen() {

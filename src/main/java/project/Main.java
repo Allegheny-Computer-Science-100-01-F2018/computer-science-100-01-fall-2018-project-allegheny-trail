@@ -54,6 +54,7 @@ public class Main {
           case "1":
           case "play":
           case "newgame":
+              input.initDictionary();
               sc.readScene("00");
               game = true;
               inputOk = true;
@@ -81,7 +82,7 @@ public class Main {
     }
 
     while (game) {
-      input.initDictionary();
+
       sc.printScene();
       //Debug == System.out.println(input.parse(input.getInput(), sc));
       String initInput = input.getInput();
@@ -95,7 +96,11 @@ public class Main {
         System.out.println("DEBUG: 2" + preInput);
       }
 
-      sc.runLogic(preInput);
+      if (preInput != null && !preInput.equals("") && !preInput.equals("INVALID")) {
+        sc.runLogic(preInput);
+      } else if (debug) {
+        System.out.println("Input Check Failed");
+      }
 
       Boolean $Debug = false;
       String debugString = "";
