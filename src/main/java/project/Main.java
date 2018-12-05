@@ -11,7 +11,7 @@ public class Main {
     String userInput = null;
     Input input = new Input();
     Scene sc = new Scene(input);
-    boolean debug = true;
+    boolean debug = false;
     boolean game = false;
     //Scanner scan = new Scanner(System.in);
 

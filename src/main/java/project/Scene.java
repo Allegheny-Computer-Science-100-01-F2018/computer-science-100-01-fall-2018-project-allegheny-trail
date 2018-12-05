@@ -13,7 +13,7 @@ public class Scene {
   private int keyNum = 0;
   private int keyIndex = 0;
   private Input inputMain;
-  private boolean debug = true;
+  private boolean debug = false;
 
   public Scene(Input inputObj) {
     inputMain = inputObj;
@@ -22,6 +22,8 @@ public class Scene {
   public void readScene(String inputSceneId) {
     sceneId = inputSceneId;
     //String[][][] commands = new String[20][20][3];
+    keyNum = 0;
+    keyIndex = 0;
 
     if (debug) {
       System.out.println("DEBUG: Reading in Scene: " + sceneId + "scene.txt");
@@ -76,6 +78,14 @@ public class Scene {
         commands[keyNum][1 + keyIndex][0] = input.substring(input.indexOf("(") + 1, input.indexOf(")"));
         commands[keyNum][1 + keyIndex][1] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
         commands[keyNum][1 + keyIndex][2] = input.substring(input.indexOf("{") + 1, input.indexOf("}"));
+
+        if (debug) {
+          System.out.println("keyIndex = 1 + " + keyIndex);
+          System.out.println("obj 0: " + input.substring(input.indexOf("(") + 1, input.indexOf(")")));
+          System.out.println("obj 1: " + input.substring(input.indexOf("<") + 1, input.indexOf(">")));
+          System.out.println("obj 2: " + input.substring(input.indexOf("{") + 1, input.indexOf("}")));
+        }
+
         keyIndex++;
         break;
 
@@ -85,9 +95,14 @@ public class Scene {
       }
     }
 
+    if (debug) {
+      for(int i = 0; i < commands.length; i++) {
+        //System.out.println("commands[" + i + "][0][0] = " + commands[i][0][0]);
 
-    for(int i = 0; i < commands.length; i++) {
-      System.out.println("commands[" + i + "][0][0] = " + commands[i][0][0]);
+        for(int z = 0; z < commands[1].length; z++) {
+          System.out.println("commands[" + i + "][" + z +"][0] = " + commands[i][z][0]);
+        }
+      }
     }
   }
 
@@ -115,12 +130,17 @@ public class Scene {
     boolean status = false;
     int checkCounter = 0;
     int checkCounter2 = 0;
+    commandIn = commandIn.toUpperCase();
+    objectIn = objectIn.toUpperCase();
 
-    System.out.println("checkCommand(" + commandIn + ", " + objectIn + ");");
+    //System.out.println("checkCommand(" + commandIn + ", " + objectIn + ");");
 
     while (!commandAvailable && commands[checkCounter][0][0] != null) {
       if (commandIn.contains(commands[checkCounter][0][0])) {
         commandAvailable = true;
+        if (debug) {
+          System.out.println("Command Valid");
+        }
       } else {
         checkCounter++;
       }
@@ -132,9 +152,15 @@ public class Scene {
       }
     } else {
       while (!objectAvailable && commands[checkCounter][checkCounter2][0] != null) {
+        if (debug) {
+          System.out.println("Checking Object: " + commands[checkCounter][checkCounter2][0]);
+          System.out.println("Checking Object2: " + commands[checkCounter][checkCounter2+1][0]);
+        }
+
         if (objectIn.contains(commands[checkCounter][checkCounter2][0])) {
           objectAvailable = true;
         } else {
+          //System.out.println("Object FAILED");
           checkCounter2++;
         }
       }
@@ -174,7 +200,7 @@ public class Scene {
                 clearAll();
                 readScene(sceneId);
                 clearScreen();
-                //printScene();
+                printScene();
                 break;
             case "rand":
                 int optionNum = c.length() - c.replace("[", "").length();
@@ -192,7 +218,7 @@ public class Scene {
                 clearAll();
                 readScene(sceneId);
                 clearScreen();
-                //printScene();
+                printScene();
                 break;
           }
 
@@ -209,7 +235,7 @@ public class Scene {
   }
 
   public void askContinue() {
-    System.out.println("Press ENTER to continue.");
+    System.out.println("\nPress ENTER to continue.");
     inputMain.getInput();
   }
 

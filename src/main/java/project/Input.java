@@ -28,7 +28,7 @@ public class Input {
 
   public void initDictionary() {
 
-    System.out.println("DEBUG: Reading in Dictionary");
+    //System.out.println("DEBUG: Reading in Dictionary");
 
     Scanner scanner = null;
     try {
@@ -42,7 +42,7 @@ public class Input {
       String input;
       input = scanner.nextLine();
 
-      System.out.println("DEBUG: Line Read = " + input);
+      //System.out.println("DEBUG: Line Read = " + input);
 
       switch (input.substring(input.indexOf("["), input.indexOf("]") + 1)) {
         case ("[Main]"):
@@ -77,7 +77,7 @@ public class Input {
     while (scan.hasNext() && proceed == true) {
       inputCommand = scan.next();
       inputObject = inputCommand;
-      System.out.println("DEBUG: Testing for " + inputCommand);
+      //System.out.println("DEBUG: Testing for " + inputCommand);
       if (sc.checkCommand(inputCommand, inputObject) == true) {
         proceed = false;
       } else {
@@ -96,16 +96,16 @@ public class Input {
       proceed = true;
       while (scan.hasNext() && proceed == true) {
         inputObject = scan.next();
-        System.out.println("DEBUG: Testing for " + inputCommand + " and " + inputObject);
+        //System.out.println("DEBUG: Testing for " + inputCommand + " and " + inputObject);
         if (sc.checkCommand(inputCommand, inputObject) == true && inputCommand.contains(inputObject) == false) {
           proceed = false;
         }
       }
 
       if (sc.checkCommand(inputCommand, inputObject) == true && inputCommand.contains(inputObject) == false) {
-        System.out.println("\"" + input + "\"" + " Is a valid command");
+        //System.out.println("\"" + input + "\"" + " Is a valid command");
       } else {
-        System.out.println("\"" + input + "\"" + " Is not a valid command");
+        //System.out.println("\"" + input + "\"" + " Is not a valid command");
       }
     }
 
