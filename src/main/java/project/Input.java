@@ -57,7 +57,7 @@ public class Input {
 
         case ("[Syn]"):
         dict[keyNum][1 + keyIndex] = input.substring(input.indexOf("(") + 1, input.indexOf(")"));
-        keyIndex++;[" + inputCommand + "]<
+        keyIndex++;
         break;
 
         default:
@@ -75,7 +75,7 @@ public class Input {
     Boolean proceed = true;
 
     while (scan.hasNext() && proceed == true) {
-      inputCommand = scan.next();[" + inputCommand + "]<
+      inputCommand = scan.next();
       inputObject = inputCommand;
       System.out.println("DEBUG: Testing for " + inputCommand);
       if (sc.checkCommand(inputCommand, inputObject) == true) {
@@ -101,7 +101,7 @@ public class Input {
           proceed = false;
         }
       }
-      
+
       if (sc.checkCommand(inputCommand, inputObject) == true) {
         System.out.println("\"" + input + "\"" + " Is a valid command");
       } else {
