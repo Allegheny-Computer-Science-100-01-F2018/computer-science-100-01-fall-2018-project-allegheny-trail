@@ -1,5 +1,6 @@
 [Scene_Text]<You are in a Forest. You feel as though you are lost...>
 [Key]<OBSERVE>
-[Obj](SKY)<You look at the sky. It's actually really pretty, I won't describe it to you, because you are looking at it with me. It is undescribable... So why would I describe it? \nYou acheive nothing by doing this.>{goto[00]}
+[Obj](SKY)<You look at the sky. It's actually really pretty, I won't describe it to you, because you are looking at it with me. It is undescribable... So why would I describe it? You acheive nothing by doing this.>{goto[00]}
 [Obj](GROUND)<You look at the ground... The cold, unliving ground. In fact, it is so unliving that there isn't even any grass.>{goto[01]}
-[Obj](TREES)<Tree-ditionally the trees would not interest you. However, there seem to be a Tree-lion, tree-angular, trees, all standing like sen-trees. Its a beautiful coun-tree. \n\n\n I'm not sorry. \n You were the one who chose to look at trees.>{goto[00]}
+[Obj](TREES)<Tree-ditionally the trees would not interest you. However, there seem to be a Tree-lion, tree-angular, trees, all standing like sen-trees. Its a beautiful coun-tree. I'm not sorry. You were the one who chose to look at trees.>{goto[00]}
+[Obj](THOTS)<You manage to find Annie...all alone...with a pineapple.>{goto[50]}

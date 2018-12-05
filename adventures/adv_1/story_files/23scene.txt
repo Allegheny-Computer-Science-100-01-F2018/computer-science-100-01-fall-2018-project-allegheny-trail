@@ -1,0 +1,5 @@
+[Scene_Text]<>
+[Key]<>
+[Obj]()<>{goto[]}
+[Key]<>
+[Obj]()<>{goto[]}

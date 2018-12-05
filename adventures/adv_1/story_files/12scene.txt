@@ -3,4 +3,4 @@
 [Obj](DESKS)<You approach the desk and start reading through the papers. It is mostly just day to day business, until you notice one particular letter that stands out.>{goto[13]}
 [Obj](PEOPLE)<You search for people. Any people, really. You can't find anyone in the main rooms, or the offices... not even the bathroom. You were sure you would find someone there. You return to the main room, defeated.>{goto[12]}
 [Key]<LEAVE>
-[Obj]()<You leave the town hall, unsure if you discovered anything useful.>{goto[11]}
+[Obj]()<You leave the town hall, unsure if you discovered anything useful.>{goto[21]}

@@ -1,0 +1,4 @@
+[Scene_Text]<An explosion of flavor fills your mouth. You didn't realize how hungry you had become, as the warm spoonful fills your body with ecstacy. You have some more. Taking a seat and not noticing the fire fade. You have another spoonful. Unaware that you can no longer see the door. The bowl is half empty now, it is all you can see or desire. One last spoonful, and a small uncut red mushroom floating at the top. Down your gullet it goes, and you achieve satisfaction...
+Then the pain begins. You begin to wretch in the darkness, ears deafened by voices you have never heard before. Talking, screaming, weaping. The creaking of steps, the slamming of doors. A wash of heat and then the silence accompanied by the setting sun. Silence. Darkness. Ahead of you, you see a light.>
+[Key]<GO>
+[Obj](THERE)<You walk towards the light, feet unmoving, you feel the breeze and can smell the forest air.>{goto[00]}

@@ -1,4 +1,14 @@
 [Main]<OBSERVE>
+[Syn](DISCOVER)
 [Syn](EXAMINE)
 [Syn](INSPECT)
 [Syn](LOOK)
+[Syn](VIEW)
+[Syn](WATCH)
+[Main]<GO>
+[Syn](WALK)
+[Main]<OPEN>
+[Syn](UNLOCK)
+[Syn](UNBOLT)
+[Main]<LEAVE>
+[Syn](EXIT)

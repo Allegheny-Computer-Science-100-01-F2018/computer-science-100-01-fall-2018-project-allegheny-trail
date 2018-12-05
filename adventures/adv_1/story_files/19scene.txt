@@ -1,0 +1,4 @@
+[Scene_Text]<Within the kitchen you find what you assumed was where someone was preparing to make dinner. The smoke is coming from the burnt broth within a pot near the stove. Removing the pot, you notice that whatever was once inside has shriveled and turned into blackened pieces of charcoal. Nearby you see a kitchen knife and several juicy brown mushrooms.>
+[Key]<GO>
+[Obj](BACK)<You leave the kitchen. With the pot removed the smoke should no longer be an issue.>{goto[18]}
+

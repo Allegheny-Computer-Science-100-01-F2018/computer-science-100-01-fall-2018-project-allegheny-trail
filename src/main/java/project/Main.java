@@ -11,7 +11,7 @@ public class Main {
     String userInput = null;
     Input input = new Input();
     Scene sc = new Scene(input);
-    boolean debug = false;
+    boolean debug = true;
     boolean game = false;
     //Scanner scan = new Scanner(System.in);
 
@@ -90,11 +90,19 @@ public class Main {
 
       String preInput = input.parse(initInput, sc);
 
+      if (debug == true) {
+        System.out.println("DEBUG: 1" + initInput);
+        System.out.println("DEBUG: 2" + preInput);
+      }
+
       sc.runLogic(preInput);
 
-      if (debug) {
-        System.out.println("DEBUG: " + initInput);
-        System.out.println("DEBUG: " + preInput);
+      Boolean $Debug = false;
+      String debugString = "";
+
+      if ($Debug && debugString.contains("")) {
+        System.out.println("Please type something...");
+        debugString = input.getInput();
       }
     }
   }
