@@ -189,7 +189,6 @@ public class Input {
     int checkCounter2 = 0;
     String checkResult = inputCommand;
 
-    System.out.println("DEBUG DICT: " + dict[checkCounter][checkCounter2 + 2]);
     /**while (proceed == false) {
       if (inputCommand.contains(dict[checkCounter][checkCounter2])) {
         inputCommand = dict[checkCounter][checkCounter2];
@@ -205,7 +204,7 @@ public class Input {
       }
     }*/
 
-    while (checkResult.contains(dict[checkCounter][checkCounter2 + 1]) == false && proceed == false) {
+    while (checkResult.contains(dict[checkCounter][checkCounter2]) == false && proceed == false) {
       if (dict[checkCounter][checkCounter2 + 1] != null) {
         checkCounter2++;
       } else {
