@@ -1,0 +1,3 @@
+[Scene_Text]<An explosion of flavor fills your mouth. You didn't realize how hungry you had become, as the warm spoonful filled your body with ecstacy.>
+[Key]<GO>
+[Obj](THERE)<>{goto[]}
