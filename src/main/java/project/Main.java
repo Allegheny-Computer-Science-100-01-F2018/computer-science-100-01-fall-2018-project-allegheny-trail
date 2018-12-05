@@ -90,15 +90,15 @@ public class Main {
 
       String preInput = input.parse(initInput, sc);
 
-      //sc.runLogic(preInput);
+      sc.runLogic(preInput);
 
       if (debug) {
         System.out.println("DEBUG: " + initInput);
         System.out.println("DEBUG: " + preInput);
       }
 
-      Boolean $Debug = true;
-      String debugString = "P";
+      Boolean $Debug = false;
+      String debugString = "";
 
       if ($Debug && debugString.contains("")) {
         System.out.println("Please type something...");

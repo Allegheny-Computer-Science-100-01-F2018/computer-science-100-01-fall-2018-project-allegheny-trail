@@ -189,21 +189,6 @@ public class Input {
     int checkCounter2 = 0;
     String checkResult = inputCommand;
 
-    /**while (proceed == false) {
-      if (inputCommand.contains(dict[checkCounter][checkCounter2])) {
-        inputCommand = dict[checkCounter][checkCounter2];
-        proceed = true;
-      } else if (checkCounter2 + 1 <= dict[1].length) {
-        checkCounter2++;
-      } else if (checkCounter + 1 <= dict.length) {
-        checkCounter++;
-        checkCounter2 = 0;
-      } else {
-        inputCommand = "INVALID";
-        proceed = true;
-      }
-    }*/
-
     while (checkResult.contains(dict[checkCounter][checkCounter2]) == false && proceed == false) {
       if (dict[checkCounter][checkCounter2 + 1] != null) {
         checkCounter2++;
