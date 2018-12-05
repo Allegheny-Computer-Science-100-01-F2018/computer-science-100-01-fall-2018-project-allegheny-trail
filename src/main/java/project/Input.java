@@ -131,7 +131,7 @@ public class Input {
         if (dict[checkCounter + 1][checkCounter2 + 1] != null) {
           checkCounter++;
         } else {
-          System.out.println("No synonyms found.");
+          //System.out.println("No synonyms found.");
           synFound = false;
           proceed = true;
         }

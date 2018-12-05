@@ -73,6 +73,8 @@ public class Main {
               } catch (InterruptedException ex) {
                   Thread.currentThread().interrupt();
               }
+
+              System.exit(0);
               break;
           default:
               clearScreen();
@@ -89,6 +91,18 @@ public class Main {
       String initInput = input.getInput();
       initInput = initInput.toUpperCase();
 
+      if (initInput.equals("EXIT")) {
+
+        clearScreen();
+        System.out.println("Exiting...");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
+
+        System.exit(0);
+      }
 
       String preInput = input.parse(initInput, sc);
 

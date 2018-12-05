@@ -251,6 +251,28 @@ public class Scene {
         System.out.println("I didn't catch that, could you rephrase that?");
       }
     }
+
+    if (commandIn.equals("EXIT")) {
+      System.out.println("Are you sure you want to quit? [Y]/[N]");
+      String in = inputMain.getInput();
+
+      switch(in) {
+        case "Y":
+        case "YES":
+            clearScreen();
+            System.out.println("Exiting...");
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException ex) {
+                Thread.currentThread().interrupt();
+            }
+            break;
+        case "N":
+        case "NO":
+            //null
+            break;
+      }
+    }
   }
 
   public void askContinue() {
