@@ -1,6 +1,6 @@
-[Scene_Text]<Special Inn Text>
+[Scene_Text]<You enter the inn, a warm fire is raging in the hearth, candles are lit throughout, yet there is nobody to be seen. The main room is filled with tables and chairs, meant to seat at least twenty people. Perhaps there is something here you can find? The staircase leading up to the second level is also clear, perhaps somebody is upstairs...>
 [Key]<SEARCH>
-[Obj](ROOM)<>{goto[]}
-[Obj](PEOPLE)<>{goto[]}
+[Obj](ROOM)<The room is completely empty, but there seem to be bowls of food on a few of the tables. You approach the one nearest to you...>{goto[15]}
+[Obj](UPSTAIRS)<You approach the stairs to look for people, but after a few echoing creaks, you begin to doubt that you'll find anybody. Yet courageously you move forward...>{goto[16]}
 [Key]<LEAVE>
-[Obj]()<>{goto[]}
+[Obj]()<You turn around and leave the inn. As you cross the threshold you notice a few small mushrooms sprouting from the doorposts, just above eye level.>{goto[11]}
