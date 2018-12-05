@@ -1,0 +1,7 @@
+[Scene_Text]<You enter the house, smoke coming from the kitchen. The main room is completely abandoned, but there seem to be small black mushrooms sprouting from the floorboards. The door to what you assume is a bedroom is propped open by a chair, in the darkness you can see something on the bed, something large.>
+[Key]<SEARCH>
+[Obj](KITCHEN)<You enter the kitchen, following the smoke...>{goto[19]}
+[Obj](BEDROOM)<You slowly approach the bedroom, and enter...>{goto[20]}
+[Obj](ROOM)<You search the room, carefully trying not to touch any of the black mushrooms. You find a small doll underneath a table. You pick it up and see that it has turned a strange shade of green. You place is back down, hoping that it wasn't dirty.>{goto[18]}
+[Key]<GO>
+[Obj](BACK)<You back away from the house, unsure of what you have seen. The occupants wouldn't care about it anymore anyway.>{goto[21]}

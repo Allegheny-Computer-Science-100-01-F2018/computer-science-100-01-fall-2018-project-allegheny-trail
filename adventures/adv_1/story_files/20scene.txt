@@ -1,0 +1,3 @@
+[Scene_Text]<Aside from the light from the main room, the room is pitched black. The rectangle of light coming from the doorway shines directly onto the bed, your shadow laying there like some exhausted villager. Surrounding the bed are small mushrooms sprouting from the floorboards, some touching the sheets. Upon the mattress, however, is one of the largest mushrooms you have ever seen. Perhaps the size of a small child, this fungus looks to be intertwined with the fabric, almost as if someone tucked it into bed. Your discomfort is clearly noticable, perhaps you should leave now.>
+[Key]<GO>
+[Obj](BACK)<You take a step back, crushing a mushroom underfoot, and close the door as much as you can.>{goto[18]}
