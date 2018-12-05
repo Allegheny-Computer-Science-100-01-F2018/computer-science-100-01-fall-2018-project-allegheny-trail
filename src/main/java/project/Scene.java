@@ -89,6 +89,27 @@ public class Scene {
     clearScreen();
     System.out.println("[   Current Scene: " + sceneId + "   |   Allegheny Trail   |   Type \"EXIT\" at any time to end the game.   ]");
     System.out.println("\n" + sceneText);
+
+    String commandsList = "";
+    for(int i = 0; i < commands.length; i++) {
+      System.out.println("ARRAY " + commands[i][0][0]);
+      if (!commands[i][0][0].equals("")) {
+        if (i == 0) {
+          commandsList = "[   ";
+        }
+
+        commandsList = commandsList + "]   [" + commands[i][0][0];
+      } else {
+        if (commandsList.equals("")) {
+          commandsList = "   ]";
+        } else {
+          commandsList = commandsList + "]";
+          break;
+        }
+      }
+    }
+
+    System.out.println("[   Available Commands:   " + commandsList + "   ]");
   }
 
   public boolean checkCommand(String commandIn, String objectIn) {

@@ -10,7 +10,7 @@ public class Input {
   private int keyIndex = 0;
   private Scanner inputScan;
 
-  //Dicionary Shizzle
+  //Dicionary
   private String[][] vars = new String[2][20];
   private int startNum = 0;
 
@@ -116,72 +116,6 @@ public class Input {
     }
   }
 
-
-  // TODO HELLO THERE
-
-
-  //  public String parse(String input, Scene sceneIn) {
-  //      Scanner scan = new Scanner(input);
-
-  //      String in2 = "";[" + inputCommand + "]<
-  //      String obj = "";
-  //      String commandString = "";
-
-  //      System.out.println("DEBUG: " + input);
-  //      while (scan.hasNext()) {
-  //        System.out.println("DEBUG: " + scan.next());
-  //      }
-  //      String check = dict[0][0];
-  //      System.out.println("DEBUG: " + check);
-
-  //      while (scan.hasNext()) {
-  //        String in = scan.next();
-  //        int key = 0;
-  //        int count = 0;
-  //        String command = "";
-
-  // TODO Note dis shit
-  //        boolean proceed = false;
-
-
-  //        while (dict[key][count] != null) {
-  //          if (dict[key][count] == in) {
-  //            command = dict[key][0];
-  //            break;
-  //          }
-  //
-  //          if (dict[key][count+1] != null) {
-  //            count++;
-  //          } else if (dict[key+1][0] != null){
-  //            count = 0;
-  //            key++;
-  //          } else {
-  //            System.out.println("I didn't understand, can you rephrase that?");
-  //            command = "";
-  //          }
-  //        }
-
-  //        if (command != "") {
-  //          while (scan.hasNext()) {
-  //            obj = scan.next();
-
-  //            if (sceneIn.checkObject(command, obj) == true) {
-  //              obj = in;
-  //              break;
-  //            }
-  //          }
-  //        }
-  //      }
-
-  //      System.out.println("DEBUG: " + command);
-
-  //      if (command != "" && obj != "") {
-  //        return ("[" + command + "]<" + obj + ">");
-  //      } else {
-  //        return null;
-  //      }
-  //  }
-
   public String checkDictionary(String inputCommand) {
     boolean proceed = false;
     boolean synFound = true;
@@ -237,10 +171,7 @@ public class Input {
 
   public int getVar(String varInput) {
     int rVar = -1;
-    //System.out.println("vars.length: " + vars[0].length);
     for (int i = 0; i < vars[0].length; i++) {
-      //System.out.println("Loop #" + i);
-      //System.out.println("Vars: " + vars[0][i]);
       if (vars[0][i].equals(varInput)) {
         rVar = Integer.valueOf(vars[1][i]);
         break;
