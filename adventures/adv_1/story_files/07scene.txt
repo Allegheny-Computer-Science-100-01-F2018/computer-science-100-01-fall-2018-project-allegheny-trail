@@ -3,4 +3,3 @@
 [Obj](Survive)<>{goto[08]}
 [Key]<???>
 [Obj](Die)<The world turns black...>{goto[09]}
-

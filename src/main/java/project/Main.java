@@ -56,6 +56,7 @@ public class Main {
           case "newgame":
               input.initDictionary();
               sc.readScene("00");
+              sc.printScene();
               game = true;
               inputOk = true;
               break;
@@ -83,7 +84,7 @@ public class Main {
 
     while (game) {
 
-      sc.printScene();
+      //sc.printScene();
       //Debug == System.out.println(input.parse(input.getInput(), sc));
       String initInput = input.getInput();
       initInput = initInput.toUpperCase();

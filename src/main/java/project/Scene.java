@@ -41,57 +41,58 @@ public class Scene {
       String input;
       input = scanner.nextLine();
 
-      if (debug) {
+      //if (debug) {
         System.out.println("DEBUG: Line Read = " + input);
-      }
-
-      switch (input.substring(input.indexOf("["), input.indexOf("]") + 1)) {
-        case ("[Scene_Text]"):
-        sceneText = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
-
-        if (debug) {
-          System.out.println("DEBUG: Scene Text = " + sceneText);
-        }
-        break;
-
-        case ("[Key]"):
-        if (commands[keyNum][0][0] == null) {
-          commands[keyNum][0][0] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
-          if (debug) {
-            System.out.println("DEBUG: Array Empty, inserting:" + input.substring(input.indexOf("<") + 1, input.indexOf(">")));
-          }
-        } else {
-          keyNum++;
-          commands[keyNum][0][0] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
-          keyIndex = 0;
+      //}
+      if (!input.equals("")) {
+        switch (input.substring(input.indexOf("["), input.indexOf("]") + 1)) {
+          case ("[Scene_Text]"):
+          sceneText = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
 
           if (debug) {
-            System.out.println("DEBUG: Array not empty");
-            System.out.println("DEBUG: Inserting: " + input.substring(input.indexOf("<") + 1, input.indexOf(">")));
-            System.out.println("DEBUG: Keynum = " + keyNum);
-            System.out.println("DEBUG: KeyIndex Reset");
+            System.out.println("DEBUG: Scene Text = " + sceneText);
           }
+          break;
+
+          case ("[Key]"):
+          if (commands[keyNum][0][0] == null) {
+            commands[keyNum][0][0] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
+            if (debug) {
+              System.out.println("DEBUG: Array Empty, inserting:" + input.substring(input.indexOf("<") + 1, input.indexOf(">")));
+            }
+          } else {
+            keyNum++;
+            commands[keyNum][0][0] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
+            keyIndex = 0;
+
+            if (debug) {
+              System.out.println("DEBUG: Array not empty");
+              System.out.println("DEBUG: Inserting: " + input.substring(input.indexOf("<") + 1, input.indexOf(">")));
+              System.out.println("DEBUG: Keynum = " + keyNum);
+              System.out.println("DEBUG: KeyIndex Reset");
+            }
+          }
+          break;
+
+          case ("[Obj]"):
+          commands[keyNum][1 + keyIndex][0] = input.substring(input.indexOf("(") + 1, input.indexOf(")"));
+          commands[keyNum][1 + keyIndex][1] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
+          commands[keyNum][1 + keyIndex][2] = input.substring(input.indexOf("{") + 1, input.indexOf("}"));
+
+          if (debug) {
+            System.out.println("keyIndex = 1 + " + keyIndex);
+            System.out.println("obj 0: " + input.substring(input.indexOf("(") + 1, input.indexOf(")")));
+            System.out.println("obj 1: " + input.substring(input.indexOf("<") + 1, input.indexOf(">")));
+            System.out.println("obj 2: " + input.substring(input.indexOf("{") + 1, input.indexOf("}")));
+          }
+
+          keyIndex++;
+          break;
+
+          default:
+          //None
+          break;
         }
-        break;
-
-        case ("[Obj]"):
-        commands[keyNum][1 + keyIndex][0] = input.substring(input.indexOf("(") + 1, input.indexOf(")"));
-        commands[keyNum][1 + keyIndex][1] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
-        commands[keyNum][1 + keyIndex][2] = input.substring(input.indexOf("{") + 1, input.indexOf("}"));
-
-        if (debug) {
-          System.out.println("keyIndex = 1 + " + keyIndex);
-          System.out.println("obj 0: " + input.substring(input.indexOf("(") + 1, input.indexOf(")")));
-          System.out.println("obj 1: " + input.substring(input.indexOf("<") + 1, input.indexOf(">")));
-          System.out.println("obj 2: " + input.substring(input.indexOf("{") + 1, input.indexOf("}")));
-        }
-
-        keyIndex++;
-        break;
-
-        default:
-        //None
-        break;
       }
     }
 
@@ -109,7 +110,25 @@ public class Scene {
   public void printScene() {
     clearScreen();
     System.out.println("[   Current Scene: " + sceneId + "   |   Allegheny Trail   |   Type \"EXIT\" at any time to end the game.   ]");
-    System.out.println("\n" + sceneText);
+
+    //Printer
+    System.out.println();
+
+    Scanner scan = null;
+    scan = new Scanner(sceneText);
+
+    String printed = "";
+    while(scan.hasNext()) {
+      String t = scan.next() + " ";
+      printed = printed + t;
+      System.out.print(t);
+      if(printed.length() > 100) {
+        printed = "";
+        System.out.println();
+      }
+    }
+
+    System.out.println();
 
     String commandsList = "";
     for(int i = 0; i < commands.length; i++) {
