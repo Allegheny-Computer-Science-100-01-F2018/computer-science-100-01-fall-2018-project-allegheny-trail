@@ -1,5 +1,6 @@
-[Scene_Text]<YOU HAVE DIED>
-[Key]<>
-[Obj]()<>{goto[]}
-[Obj]()<>{goto[]}
-[Obj]()<>{goto[]}
+[Scene_Text]<At the top of the staircase you find the rooms for any weary travelers that would come to the village. There is a single hallway with three doors on either side. Based on how far apart they are, you assume each bedroom to be very small.>
+[Key]<SEARCH>
+[Obj](ROOMS)<You go to the nearest door and attempt to open it. It is locked. The second, third, and fourth doors are locked as well. You attempt to knock on the fifth, yet all you get is a momentary echo, and silence. The last door is slightly ajar, but when attempting to open it, it hits something large, and heavy. Peeking inside, you see the silhouette of a bedframe. You can feel the draft of an open window as well. You will find nothing here.>{goto[15]}
+[Obj](HALLWAY)<Looking at the hallway, you notice a few lit candles and a few discarded items. One such item looks to be a skeleton key. You would pick it up, but you do not have the mental capacity to have an inventory system. You leave the key on the floor.>{goto[15]}
+[Key]<GO>
+[Obj](BACK)<You go back down the stairs, returning to the main room of the inn. Somehow you didn't remember the air appearing so... sporey.>{goto[14]}
