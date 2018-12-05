@@ -1,0 +1,5 @@
+[Scene_Text]<YOU HAVE DIED>
+[Key]<>
+[Obj]()<>{goto[]}
+[Obj]()<>{goto[]}
+[Obj]()<>{goto[]}
