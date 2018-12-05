@@ -81,14 +81,9 @@ public class Input {
       if (sc.checkCommand(inputCommand, inputObject) == true) {
         proceed = false;
       } else {
-<<<<<<< HEAD
-        String checkResult = checkDictionary(inputCommand);
-        if (!checkResult.equals("INVALID")) {
-=======
         inputCommand = checkDictionary(inputCommand);
         inputObject = inputCommand;
         if (sc.checkCommand(inputCommand, inputObject) == true) {
->>>>>>> 5824007d746a1f8707279c68f6e2e36644a9c322
           proceed = false;
         }
       }
@@ -107,11 +102,7 @@ public class Input {
         }
       }
 
-<<<<<<< HEAD
-      if (sc.checkCommand(inputCommand, inputObject) == true) {
-=======
       if (sc.checkCommand(inputCommand, inputObject) == true && inputCommand.contains(inputObject) == false) {
->>>>>>> 5824007d746a1f8707279c68f6e2e36644a9c322
         System.out.println("\"" + input + "\"" + " Is a valid command");
       } else {
         System.out.println("\"" + input + "\"" + " Is not a valid command");
@@ -196,32 +187,6 @@ public class Input {
     boolean synFound = true;
     int checkCounter = 0;
     int checkCounter2 = 0;
-<<<<<<< HEAD
-    String inputStr = inputCommand;
-
-    System.out.println("Dict.length: " + dict.length + " | Dict[0].length: " + dict[0].length);
-
-    while (proceed == false) {
-      if (inputStr.equals(dict[checkCounter][checkCounter2])) {
-        inputCommand = dict[checkCounter][checkCounter2];
-        proceed = true;
-      } else if (checkCounter2 + 1 < dict[0].length) {
-        if (dict[checkCounter][checkCounter2 + 1] != "") {
-          checkCounter2++;
-        }
-      } else if (checkCounter + 1 < dict.length) {
-        if (dict[checkCounter + 1][0] != "") {
-          checkCounter++;
-          checkCounter2 = 0;
-        }
-      } else {
-        inputStr = "INVALID";
-        proceed = true;
-      }
-    }
-
-    return inputStr;
-=======
     String checkResult = inputCommand;
 
     while (checkResult.contains(dict[checkCounter][checkCounter2]) == false && proceed == false) {
@@ -242,7 +207,6 @@ public class Input {
       checkResult = dict[checkCounter][0];
     }
     return checkResult;
->>>>>>> 5824007d746a1f8707279c68f6e2e36644a9c322
   }
 
   //Config Stuff
