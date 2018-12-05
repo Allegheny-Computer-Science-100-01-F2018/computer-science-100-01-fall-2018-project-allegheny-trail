@@ -1,0 +1,14 @@
+[Scene_Text]<The path slopes up gradually towards the small castle on the hill. You notice that the path, while wide
+enough for a carriage and some guards, tapers off at the edges and slowly turns into a cliff face. You take in
+your surroundings as you continue the slow climb. The castle is more of a glorified mansion with ramparts and 
+a single tower up front and to your right. The tower has a fungus-like dome on top. As you finally reach the
+gate before the castle, before you lies a variety of maces, makeshift spears, finely crafted swords, blunt
+knives, and wooden shields. There are also the remnants of Fresian Horses, which are those criss-crossed wooden
+stakes that are meant to deter cavalry, but I am sure you already knew that. The portcullis is raised and 
+the large wooden doors are wide open. It seems like some sort of battle took place, but you can't be sure.>
+[Key]<OBSERVE>
+[Obj](WEAPONS)<You begin to look more closely at the numerous weapons lying in the dirt...>{goto[23]}
+[Obj](GATE)<Upon closer inspection, the gate appears to be rotted>{goto[22]}
+[Key]<GO>
+[Obj](CASTLE)<Having seen enough at the gate, you try to calm your nerves as you approach the castle.
+You feel strangely guilty...>{goto[24]}
