@@ -55,6 +55,7 @@ public class Main {
           case "play":
           case "newgame":
               input.initDictionary();
+
               sc.readScene("00");
               sc.printScene();
               game = true;
@@ -102,6 +103,9 @@ public class Main {
         }
 
         System.exit(0);
+      } else if (initInput.equals("SAVES")) {
+        //Save s = new Save();
+        //s.saveGame(sc);
       }
 
       String preInput = input.parse(initInput, sc);
