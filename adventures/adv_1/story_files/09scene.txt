@@ -1,5 +1,5 @@
 [Scene_Text]<YOU HAVE DIED>
-[Key]<>
-[Obj]()<>{goto[]}
+[Key]<RESTART>
+[Obj](ADVENTURE)<It is time to begin again...>{goto[00]}
 [Obj]()<>{goto[]}
 [Obj]()<>{goto[]}
