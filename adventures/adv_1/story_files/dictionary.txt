@@ -11,4 +11,4 @@
 [Syn](UNLOCK)
 [Syn](UNBOLT)
 [Main]<LEAVE>
-[Syn](EXIT)
+[Syn](ABANDON)
