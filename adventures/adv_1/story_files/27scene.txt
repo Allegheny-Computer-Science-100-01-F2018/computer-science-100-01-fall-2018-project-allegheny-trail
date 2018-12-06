@@ -1,0 +1,11 @@
+[Scene_Text]<You pull the sheets over your body and shut your eyes. The covers are the softest you
+believe you have ever felt. It feels as if you have come home to your bed after a long day's travel.
+Sleep slowly takes a hold of you and the world becomes dark.>
+[Key]<>
+[Obj]()<You hear the sound of a bell. One that is rung only when under siege. You rush out of
+the room in a fury. Yells can be heard outside. A clattering of weapons. The sound of horses and
+the gate opening in the distance. A door opens to your left and you see purple robes. You are blinded
+by the midday sun. Yelling in the distance, closer than before. Servants running about the castle. A
+woman's cry of fear. A small child wailing for its father. The door on your left slamming shut and
+a deadbolt locking in place. More running. More yelling. A scream from above. An explosion. An Earthquake.
+\nSilence.>{goto[00]}
