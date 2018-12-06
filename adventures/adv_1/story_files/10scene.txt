@@ -1,4 +1,4 @@
-[Scene_Text]<Continuing your journey... you notice the trees begin to thin, and the silhouettes of houses begin to appear. Before you know it, you have entered a village. You stop and take hold of your surroundings. >
+[Scene_Text]<Continuing your journey... you notice the trees begin to thin, and the silhouettes of houses begin to appear. Before you know it, you have entered a village. You stop and take hold of your surroundings.>
 [Key]<OBSERVE>
 [Obj](GROUND)<This is the end of the road, all that is in front of you is the village. However, you do notice that there are more mushrooms near the road, and some small ones growing off of the road itself.>{goto[10]}
 [Obj](VILLAGE)<The village looks completely abandoned. Doors are left ajar. Not a soul to be seen. The street lights are on, however; kerosine burning brightly as tiny sentinels in the darkness. Something feels very wrong.>{goto[11]}
