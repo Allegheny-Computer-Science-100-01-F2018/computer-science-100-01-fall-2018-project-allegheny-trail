@@ -1,5 +1,5 @@
 [Scene_Text]<It is remarkable! The crate that you had just opened was merely the outer shell of a smaller, far more interesting, crate. What secrets could it hold inside? Perhaps riches, a diamond tiara, the key to the city... Oh the possibilities are endless! Or maybe it holds another SMALLER box... DON'T LEAVE ME WAITING, OPEN IT>
 [Key]<OPEN>
-[Obj](OPEN)<You open the box and inside you find...>{rand[03][04][05]}
+[Obj](BOX)<You open the box and inside you find...>{rand[03][04][05]}
 [Key]<LEAVE>
 [Obj](AREA)<Having no sense of adventure you continue on the path. After some time you begin to realize that you are back where you started. There is a fork in the road.>{goto[01]}

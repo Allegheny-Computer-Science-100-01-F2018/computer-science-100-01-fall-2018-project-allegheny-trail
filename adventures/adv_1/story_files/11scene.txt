@@ -1,7 +1,4 @@
-[Scene_Text]<You ought to investigate. There should be a few points of interest to check out...
-Maybe there is an inn which you could stay at? There seems to be one a few houses down, smoke coming from the chimney.
-There should also be a town hall, its clocktower standing high above the other houses, it's 10:35.
-One of the nearby houses looks promising, too. You can smell something burning from inside.>
+[Scene_Text]<You ought to investigate. There should be a few points of interest to check out... Maybe there is an inn which you could stay at? There seems to be one a few houses down, smoke coming from the chimney. There should also be a town hall, its clocktower standing high above the other houses, it's 10:35. One of the nearby houses looks promising, too. You can smell something burning from inside.>
 [Key]<GO>
 [Obj](HALL)<You go towards the town hall, maybe you could find something there...>{goto[12]}
 [Obj](INN)<You go towards the Inn, hopefully somebody is inside...>{goto[14]}
