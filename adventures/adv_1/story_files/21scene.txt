@@ -1,9 +1,4 @@
-[Scene_Text]<The village looks darker somehow, but perhaps there is more you can discover. There should be a few points of interest to check out...
-Maybe there is an inn which you could stay at? There seems to be one a few houses down, smoke coming from the chimney.
-There should also be a town hall, its clocktower standing high above the other houses, it's 11:02.
-One of the nearby houses looks promising. You can smell something burning from inside.
-The sky starts to clear, you realize that there must have been some sort of fog surrounding the village.
-You suddenly notice the spectre of a small castle looming ahead, just outside of the village. You see a single spire jutting high above the holdfast. A flickering light at its peak. What could be there?>
+[Scene_Text]<The village looks darker somehow, but perhaps there is more you can discover. There should be a few points of interest to check out... Maybe there is an inn which you could stay at? There seems to be one a few houses down, smoke coming from the chimney. There should also be a town hall, its clocktower standing high above the other houses, it's 11:02. One of the nearby houses looks promising. You can smell something burning from inside. The sky starts to clear, you realize that there must have been some sort of fog surrounding the village. You suddenly notice the spectre of a small castle looming ahead, just outside of the village. You see a single spire jutting high above the holdfast. A flickering light at its peak. What could be there?>
 [Key]<GO>
 [Obj](HALL)<You go towards the town hall, maybe you could find something there...>{goto[12]}
 [Obj](INN)<You go towards the Inn, hopefully somebody is inside...>{goto[14]}
