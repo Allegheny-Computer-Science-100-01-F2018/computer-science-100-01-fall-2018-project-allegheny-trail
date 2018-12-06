@@ -2,4 +2,4 @@
 [Key]<TAKE>
 [Obj](NAP)<Against your better judgement, you decide that resting your eyes for a moment can only be beneficial.>{goto[27]}
 [Key]<LEAVE>
-[Key](ROOM)<Knowing better than to take a nap in an abandoned castle infested with some sort of mushroom smell, you leave the room and head back into the hall.>{goto[25]}
+[Obj](ROOM)<Knowing better than to take a nap in an abandoned castle infested with some sort of mushroom smell, you leave the room and head back into the hall.>{goto[25]}

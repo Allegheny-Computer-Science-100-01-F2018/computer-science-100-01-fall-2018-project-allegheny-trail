@@ -1,21 +1,5 @@
 [Scene_Text]<The letter is sealed with what looks to be the seal of the village, an artist's rendition of their clocktower. The paper looks new, as if the person who wrote it had done so just minutes ago.>
 [Key]<READ>
-[Obj](LETTER)<You open the letter and begin to read it.
-	To the esteemed REDACTED,
-	It has been a fortnite since you have presented your unjust ultimatum to our fair village. We do not know what powers you claim to possess, but we shall not be intimidated. The taxes that the castle demands of us are far too high. How are we to eat? How are we to thrive? Such injustices will not be tolerated. We have sent word to the King, who will send a delegate to judge your treatment of us and your fiefdom. He shall decide whether we shall remain YOUR people. I would say it has been a pleasure, but I truly hope some sort of plague sprouts from your chest and damns you for all eternity.
-	Regards,
-	Jamison Wittlebottom, Mayor
-	Theodore Rumpenfeld, Councilman
-	Sarah O'Tracy, Councilwoman
-	Max Sunderlandshire, Councilman
-	Jason Vorhei, Councilman
-	Shlomo Mancherowicz, Councilman
-	Cynthia Rosenbud, Councilwoman
-	Quentin MastroGiovani, Councilman
-	Janice Jumdinov, Councilwoman
-	Daniel von Lichtenstein, Councilman
-	Caden Breuchenski, Councilman
-	Sungwoo Liu, Councilman
-	Zechariyah ibn Michal, Secretary>{goto[11]}
+[Obj](LETTER)<You open the letter and begin to read it. To the esteemed REDACTED, It has been a fortnite since you have presented your unjust ultimatum to our fair village. We do not know what powers you claim to possess, but we shall not be intimidated. The taxes that the castle demands of us are far too high. How are we to eat? How are we to thrive? Such injustices will not be tolerated. We have sent word to the King, who will send a delegate to judge your treatment of us and your fiefdom. He shall decide whether we shall remain YOUR people. I would say it has been a pleasure, but I truly hope some sort of plague sprouts from your chest and damns you for all eternity. Regards, Jamison Wittlebottom, Mayor; Theodore Rumpenfeld, Councilman; Sarah O'Tracy, Councilwoman; Max Sunderlandshire, Councilman; Jason Vorhei, Councilman; Shlomo Mancherowicz, Councilman; Cynthia Rosenbud, Councilwoman; Quentin; MastroGiovani, Councilman; Janice Jumdinov, Councilwoman; Daniel von Lichtenstein, Councilman; Caden Breuchenski, Councilman; Sungwoo Liu, Councilman; Zechariyah ibn Michal, Secretary>{goto[12]}
 [Key]<IGNORE>
 [Obj]()<Deciding not commit a felony and read someone elses mail. LOOK IT UP. You decide to leave.>{goto[11]}
