@@ -1,8 +1,5 @@
-[Scene_Text]<The bed looks extremely comfortable. You find yoursef fixated on nothing else in the room besides 
-this bed. It is king size; it has silk bedsheets; it has five pillows that appear so soft and supporting; it has an ornate 
-headboard. You had never been so eager to take a nap in your life, and you have had 8 AM classes in college.>
+[Scene_Text]<The bed looks extremely comfortable. You find yoursef fixated on nothing else in the room besides this bed. It is king size; it has silk bedsheets; it has five pillows that appear so soft and supporting; it has an ornate headboard. You had never been so eager to take a nap in your life, and you have had 8 AM classes in college.>
 [Key]<TAKE>
 [Obj](NAP)<Against your better judgement, you decide that resting your eyes for a moment can only be beneficial.>{goto[27]}
 [Key]<LEAVE>
-[Key](ROOM)<Knowing better than to take a nap in an abandoned castle infested with some sort of mushroom 
-smell, you leave the room and head back into the hall.>{goto[25]}
+[Key](ROOM)<Knowing better than to take a nap in an abandoned castle infested with some sort of mushroom smell, you leave the room and head back into the hall.>{goto[25]}
