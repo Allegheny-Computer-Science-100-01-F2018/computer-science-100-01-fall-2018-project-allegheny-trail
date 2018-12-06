@@ -1,1 +1,7 @@
-placeholder
+[Scene_Text]<Reaching the top of the stairs, you try your best to make out your surroundings. The air is filled with moisture and a horrible smell that you believe has seeped into the very pores of your skin. You believe you can see a door to your right and a short hallway to your left.>
+[Key]<OPEN>
+[Obj](DOOR)<It's locked from the inside.>{goto[24]}
+[Key]<KICK>
+[Obj](DOOR)<Did you really think that was going to work? All you managed to successfully do was stumble backwards and hurt you foot.>{goto[24]}
+[Key]<OBSERVE>
+[Obj](HALLWAY)<You look more closely at the hallway and determine that two doors exist on opposite sides of the hall.>{goto[25]}
