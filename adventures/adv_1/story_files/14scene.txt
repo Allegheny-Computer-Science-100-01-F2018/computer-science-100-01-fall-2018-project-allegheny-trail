@@ -3,4 +3,4 @@
 [Obj](ROOM)<The room is completely empty, but there seem to be bowls of food on a few of the tables. You approach the one nearest to you...>{goto[16]}
 [Obj](UPSTAIRS)<You approach the stairs to look for people, but after a few echoing creaks, you begin to doubt that you'll find anybody. Yet courageously you move forward...>{goto[15]}
 [Key]<LEAVE>
-[Obj]()<You turn around and leave the inn. As you cross the threshold you notice a few small mushrooms sprouting from the doorposts, just above eye level.>{goto[21]}
+[Obj](AREA)<You turn around and leave the inn. As you cross the threshold you notice a few small mushrooms sprouting from the doorposts, just above eye level.>{goto[21]}
