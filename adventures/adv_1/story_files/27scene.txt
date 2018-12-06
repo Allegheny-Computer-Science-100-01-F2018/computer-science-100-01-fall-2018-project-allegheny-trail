@@ -8,4 +8,4 @@ the gate opening in the distance. A door opens to your left and you see purple r
 by the midday sun. Yelling in the distance, closer than before. Servants running about the castle. A
 woman's cry of fear. A small child wailing for its father. The door on your left slamming shut and
 a deadbolt locking in place. More running. More yelling. A scream from above. An explosion. An Earthquake.
-\nSilence.>{goto[00]}
+Silence.>{goto[00]}
