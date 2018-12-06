@@ -120,7 +120,14 @@ public class Scene {
     String printed = "";
     while(scan.hasNext()) {
       String t = scan.next() + " ";
-      printed = printed + t;
+
+      if (t == "\n  ") {
+        System.out.println("\n");
+        printed = printed;
+      } else {
+        printed = printed + t;
+      }
+
       System.out.print(t);
       if(printed.length() > 100) {
         printed = "";

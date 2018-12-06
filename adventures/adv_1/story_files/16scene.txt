@@ -1,5 +1,5 @@
 [Scene_Text]<The nearest food bowl is filled with a thick broth. Freshly sliced mushrooms float through it, and you notice that steam is rising from it. Whoever was planning to eat this had clearly poured it recently. The nearby spoon almost looked eager to dip into the bowl. Your stomach grumbles for a brief moment. You look around, the room looks eerily yellow, and small spore-like particles fill the air. Looking back at the soup your mouth begins to water. Maybe you should eat it?>
 [Key]<EAT>
 [Obj](SOUP)<You pick up the spoon and shovel a warm spoonful of soup into your mouth...>{goto[17]}
-{Key]<GO>
+[Key]<GO>
 [Obj](BACK)<Something doesn't feel right. Nothing here feels right. You should leave. NOW.>{goto[14]}
