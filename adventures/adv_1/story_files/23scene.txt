@@ -1,5 +1,7 @@
-[Scene_Text]<>
-[Key]<>
-[Obj]()<>{goto[]}
-[Key]<>
-[Obj]()<>{goto[]}
+[Scene_Text]<Directly ahead are some stairs to the second floor, to the right is a short hallway that turns deeper into the castle, and to the left is what appears to be the servants' quarters.>
+[Key]<GO>
+[Obj](UPSTAIRS)<You decide to look around upstairs for some answers.>{goto[24]}
+[Obj](LEFT)<You turn left and push open the door to the servants' quarters.>{goto[28]}
+[Obj](RIGHT)<You take a right and then round the corner that leads you into more darkness.>{goto[]}
+[Key]<LEAVE>
+[Obj](CASTLE)<Having lost your stomach for this adventure, you try to leave. However, the door has shut behind you and, despite a valiant effort, will not open. It appears you have no choice but to go deeper into the darkness...>{goto[23]}
