@@ -1,4 +1,4 @@
-[Scene_Text]<While walking along the road you notice a group of mushrooms at the edge of the road. There are dozens, but one looks particularly delicious. It is small, red, and has multiple white dots. It looks delicious... \n Maybe you should take a bite?>
+[Scene_Text]<While walking along the road you notice a group of mushrooms at the edge of the road. There are dozens, but one looks particularly delicious. It is small, red, and has multiple white dots. It looks delicious... Maybe you should take a bite?>
 [Key]<EAT>
 [Obj](MUSHROOM)<You eat the Mushroom.>{goto[07]}
 [Key]<LEAVE>

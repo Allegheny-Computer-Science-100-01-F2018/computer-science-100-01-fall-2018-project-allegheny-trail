@@ -1,4 +1,4 @@
-[Scene_Text]<The small mushroom within the box is small, red, and has multiple white dots. It looks delicious... \n Maybe you should take a bite?>
+[Scene_Text]<The small mushroom within the box is small, red, and has multiple white dots. It looks delicious... Maybe you should take a bite?>
 [Key]<EAT>
 [Obj](MUSHROOM)<You eat the Mushroom.>{goto[07]}
 [Key]<LEAVE>

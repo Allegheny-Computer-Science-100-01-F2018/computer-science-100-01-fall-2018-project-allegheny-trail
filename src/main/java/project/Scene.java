@@ -135,8 +135,14 @@ public class Scene {
       //System.out.println("ARRAY " + commands[i][0][0]);
       if (commands[i][0][0] != null && !commands[i][0][0].equals("")) {
         commandsList = commandsList + "[" + commands[i][0][0] + "]   ";
-      } else {
-        break;
+      }
+
+      for(int z = 1; z < commands[1].length; z++) {
+        if (commands[i][z][0] != null && !commands[i][z][0].equals("")) {
+          commandsList = commandsList + "<" + commands[i][z][0] + ">   ";
+        } else {
+          break;
+        }
       }
     }
 

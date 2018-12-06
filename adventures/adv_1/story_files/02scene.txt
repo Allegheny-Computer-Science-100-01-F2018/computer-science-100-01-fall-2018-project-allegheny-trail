@@ -1,5 +1,5 @@
 [Scene_Text]<After some time you find an abandoned crate.>
 [Key]<OPEN>
-[Obj](BOX)<You open the box and inside you find...>{rand[03][04][05]}
+[Obj](CRATE)<You open the box and inside you find...>{rand[03][04][05]}
 [Key]<LEAVE>
-[Obj](BOX)<Having no sense of adventure you continue on the path. After some time you begin to realize that you are back where you started.>{goto[01]}
+[Obj](CRATE)<Having no sense of adventure you continue on the path. After some time you begin to realize that you are back where you started.>{goto[01]}

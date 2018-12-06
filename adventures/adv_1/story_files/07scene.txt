@@ -1,5 +1,5 @@
-[Scene_Text]<It doesn't really have much of a taste... \n Maybe you should eat-- OH MY! \n The colors, they are singing. You can taste the sound of music! The trees in their tree-umphant glory are shouting your name! The world begins to turn on its axis as the stars turn into grains of sand upon the desert that is the sky! It is glorious, even more so that getting the last slice of pizza in a college dorm room and realizing that it doesn't have any pinnapples on it. I mean seriously? Who does that? I don't care if it makes the flavor more exotic, Frank, if I wanted fruit I would have ordered that fruit salad that Susan wanted. GOD. WHY ARE THEY SO LAME? Anyways. This is perhaps the happiest you have ever been, no number of tree puns could bring you down. YOU ARE ON TOP OF THE WORLD!!! >
-[Key]<???>
-[Obj](Survive)<>{goto[08]}
-[Key]<???>
+[Scene_Text]<It doesn't really have much of a taste... Maybe you should eat-- OH MY! The colors, they are singing. You can taste the sound of music! The trees in their tree-umphant glory are shouting your name! The world begins to turn on its axis as the stars turn into grains of sand upon the desert that is the sky! It is glorious, even more so that getting the last slice of pizza in a college dorm room and realizing that it doesn't have any pinnapples on it. I mean seriously? Who does that? I don't care if it makes the flavor more exotic, Frank, if I wanted fruit I would have ordered that fruit salad that Susan wanted. GOD. WHY ARE THEY SO LAME? Anyways. This is perhaps the happiest you have ever been, no number of tree puns could bring you down. YOU ARE ON TOP OF THE WORLD!!! >
+[Key]<LEAVE>
+[Obj]()<>{goto[08]}
+[Key]<STAY>
 [Obj](Die)<The world turns black...>{goto[09]}
