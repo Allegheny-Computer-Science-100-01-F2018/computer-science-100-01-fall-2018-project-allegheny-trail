@@ -1,3 +1,0 @@
-[Scene_Text]<She starts to charge in your general direction, but trips and plows into the ground. She appears unconscious.>
-[Key]<EAT>
-[Obj](PINEAPPLE)<You devour the fallen pineapple. It's pretty good. You deem her a worthy sacrifice.>{goto[00]}

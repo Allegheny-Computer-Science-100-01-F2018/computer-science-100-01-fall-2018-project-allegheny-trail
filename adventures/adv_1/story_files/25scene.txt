@@ -1,0 +1,7 @@
+[Scene_Text]<The door on the left appears to be locked tight. While the door on the right is slightly ajar.>
+[Key]<OPEN>
+[Obj](LEFT)<The door is indeed locked. You notice what appears to be some mushrooms growing from underneath the >{goto[25]}
+[Obj](RIGHT)<You gently push the door on the right open and enter what appears to be the lords bedroom. 
+You feel slightly at ease as you enter. The bed is freshly made and the rooms smells of lavendar.>{goto[26]}
+[Key]<LEAVE>
+[Obj](HALLWAY)<You exit the small hallway and return to the top of the staircase.>{goto[24]}
