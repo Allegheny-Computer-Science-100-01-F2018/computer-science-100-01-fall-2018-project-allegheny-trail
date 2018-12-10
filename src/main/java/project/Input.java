@@ -26,6 +26,8 @@ public class Input {
     return inputScan.nextLine();
   }
 
+  /** Initialize dictionary (read it all in!).
+  */
   public void initDictionary() {
 
     //System.out.println("DEBUG: Reading in Dictionary");
@@ -46,27 +48,29 @@ public class Input {
 
       switch (input.substring(input.indexOf("["), input.indexOf("]") + 1)) {
         case ("[Main]"):
-        if (dict[keyNum][0] == null) {
-          dict[keyNum][0] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
-        } else {
-          keyNum++;
-          dict[keyNum][0] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
-          keyIndex = 0;
-        }
-        break;
+          if (dict[keyNum][0] == null) {
+            dict[keyNum][0] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
+          } else {
+            keyNum++;
+            dict[keyNum][0] = input.substring(input.indexOf("<") + 1, input.indexOf(">"));
+            keyIndex = 0;
+          }
+          break;
 
         case ("[Syn]"):
-        dict[keyNum][1 + keyIndex] = input.substring(input.indexOf("(") + 1, input.indexOf(")"));
-        keyIndex++;
-        break;
+          dict[keyNum][1 + keyIndex] = input.substring(input.indexOf("(") + 1, input.indexOf(")"));
+          keyIndex++;
+          break;
 
         default:
-        //None
-        break;
+          //None
+          break;
       }
     }
   }
 
+  /** Parse user input for valid commands.
+  */
   public String parse(String input, Scene sceneIn) {
     Scanner scan = new Scanner(input.toUpperCase());
     Scene sc = sceneIn;
@@ -97,12 +101,14 @@ public class Input {
       while (scan.hasNext() && proceed == true) {
         inputObject = scan.next();
         //System.out.println("DEBUG: Testing for " + inputCommand + " and " + inputObject);
-        if (sc.checkCommand(inputCommand, inputObject) == true && inputCommand.contains(inputObject) == false) {
+        if (sc.checkCommand(inputCommand, inputObject) == true
+            && inputCommand.contains(inputObject) == false) {
           proceed = false;
         }
       }
 
-      if (sc.checkCommand(inputCommand, inputObject) == true && inputCommand.contains(inputObject) == false) {
+      if (sc.checkCommand(inputCommand, inputObject) == true
+          && inputCommand.contains(inputObject) == false) {
         //System.out.println("\"" + input + "\"" + " Is a valid command");
       } else {
         //System.out.println("\"" + input + "\"" + " Is not a valid command");
@@ -116,6 +122,8 @@ public class Input {
     }
   }
 
+  /** Check dictionary for valid variation of command.
+  */
   public String checkDictionary(String inputCommand) {
     boolean proceed = false;
     boolean synFound = true;
@@ -144,6 +152,10 @@ public class Input {
   }
 
   //Config Stuff
+
+  /** Read in the config file.
+  * Currently unused...
+  */
   public void readConfig() {
     System.out.println("DEBUG: Reading in Config");
 
@@ -169,14 +181,16 @@ public class Input {
     }
   }
 
+  /** Check if custom variable exists and return it.
+  */
   public int getVar(String varInput) {
-    int rVar = -1;
+    int returnVar = -1;
     for (int i = 0; i < vars[0].length; i++) {
       if (vars[0][i].equals(varInput)) {
-        rVar = Integer.valueOf(vars[1][i]);
+        returnVar = Integer.valueOf(vars[1][i]);
         break;
       }
     }
-    return rVar;
+    return returnVar;
   }
 }
