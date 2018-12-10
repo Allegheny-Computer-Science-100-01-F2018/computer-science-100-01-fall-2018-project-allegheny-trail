@@ -276,6 +276,16 @@ public class Scene {
               printScene();
               break;
 
+            case "end":
+              System.out.println("Exiting...");
+              try {
+                Thread.sleep(1000);
+              } catch (InterruptedException ex) {
+                Thread.currentThread().interrupt();
+              }
+
+              System.exit(0);
+              break;
             default:
               //null
               break;
