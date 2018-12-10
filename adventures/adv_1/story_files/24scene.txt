@@ -5,3 +5,5 @@
 [Obj](DOOR)<Did you really think that was going to work? All you managed to successfully do was stumble backwards and hurt you foot.>{goto[24]}
 [Key]<OBSERVE>
 [Obj](HALLWAY)<You look more closely at the hallway and determine that two doors exist on opposite sides of the hall.>{goto[25]}
+[Key]<GO>
+[Obj](DOWNSTAIRS)<You decide to head back down the stairs you came up from.>{goto[23]}
