@@ -1,0 +1,3 @@
+[Scene_Text]<You enter the next room and shut the door behind you. You are in another hallway. Straight ahead is a dead end and another window. The moonlight shines brighter in here, and it illuminates a cluster of mushrooms ahead of you. Halfway down the hall is another door. Beneath it you can see a light fog.>
+[Key]<OPEN>
+[Obj](DOOR)<You push the door open and fog fills the hallway. Everywhere you step you can now hear the crunching of mushrooms under your shoes.>{goto[32]}
