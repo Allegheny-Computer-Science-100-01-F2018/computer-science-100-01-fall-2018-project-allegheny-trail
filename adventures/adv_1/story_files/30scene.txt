@@ -1,0 +1,5 @@
+[Scene_Text]<Do you wish to go deeper into the castle?>
+[Key]<OPEN>
+[Obj](DOOR)<You push forward into the next room>{goto[31]}
+[Key]<GO>
+[Obj](BACK)<You head back, not prepared for what must lie in the darkness.>{goto[29]}
