@@ -1,0 +1,6 @@
+[Scene_Text]<It is hard to see anything in this light, but you make out what appears to be a door down the hall and to your left. There is also a window letting in the very dim light of the moon.>
+[Key]<OBSERVE>
+[Obj](DOOR)<The door is ajar.>{goto[30]}
+[Obj](WINDOW)<You peer outside upon the vast countryside. The dim light of the moon echoes across the rolling hills. Beneath you, the cliff upon which the castle resides gives you vertigo. Why must people always insist on looking down?>{goto[29]}
+[Key]<LEAVE>
+[Obj](AREA)<You leave this part of the castle for now, believing that you should explore another area more before heading deeper.>{goto[23]}
