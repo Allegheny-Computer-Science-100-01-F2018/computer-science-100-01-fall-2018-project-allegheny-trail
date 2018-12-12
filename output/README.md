@@ -3,20 +3,20 @@ Additional pictures of the output and associated input can also be located withi
 
 An example of the customizable dictionary.
 
-![DisplayText][DictionarySplice.png]
+![DisplayText](DictionarySplice.png)
 
 A scene which allows the user to implement random encounters.
 
-![DisplayText][RASplice.png]
+![DisplayText](RASplice.png)
 
 A result of the random encounter.
 
-![DisplayText][RBSplice.png]
+![DisplayText](RBSplice.png)
 
 Another result, which leads to a different scene.
 
-![DisplayText][RCSplice.png]
+![DisplayText](RCSplice.png)
 
 A possible ending, which enables the user to choose how another user restarts the game.
 
-![DisplayText][EndSplice.png]
+![DisplayText](EndSplice.png)

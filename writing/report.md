@@ -26,8 +26,8 @@ Due to the modular nature of the program, there are no definitive results in the
 
 The usage of dictionaries and different encounter logic.
 
-![DisplayText][DictionarySplice.png]
+![DisplayText](DictionarySplice.png)
 
-![DisplayText][RASplice.png]
+![DisplayText](RASplice.png)
 
 The final result of the project is a close approximation of our original intent. In terms of infinite scalability, the modular nature of the program enables the user to design story arcs and adjust the flexibility of the parsing system with very little knowledge of computer science. Due to the interpretive parsing system, the user is presented with the minimum requirements in order to easily progress the story. Another benefit of the display of options is a simple and user-friendly interface that negates the disadvantages of the command console. In general, the interaction between the user and user-created story is relatively smooth. As far as challenges were concerned, the entire concept of modularity required abstract, computational thinking and a complete inability to hard code. Additionally, the process of learning how to interpret a modular file demanded the use of delimiters, 3D arrays, and various applications of the “null” value. Once the modularity was implemented, another challenge arose in the creation of a type of logic method which handled the interaction between the different modular files. The greatest benefit in overcoming these issues is the ability to foresee and compensate for a massive variety of user-based input without the program failing.
