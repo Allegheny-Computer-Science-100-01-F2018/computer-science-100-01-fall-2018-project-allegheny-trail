@@ -1,1 +1,7 @@
-
+[Scene_Text]<You are in what you believe is the tower portion of the castle. A spiral staircase flush against the wall leads up to the second floor. There is a chain attached to the wall and tied around an emu sized mushroom. Odd size comparison, but its the first thing you thought of. There is also some metal towers on the far side of the room.>
+[Key]<OBSERVE>
+[Obj](CHAIN)<You take a closer look at this metal chain. It appears to also be tied around the mushroom. Almost like a leash.>{goto[32]}
+[Obj](MUSHROOM)<Its pretty big. You still aren't sure why it reminds you of an emu. But you know what, its not the weirdest thing that has happened on this journey.>{goto[32]}
+[Obj](TOWERS)<You get a closer look at the towers and see a blue light flash between them. You have no idea that this is electricity given the time period that this story takes place, so to you, this is wizard fire.>{goto[32]}
+[Key]<GO>
+[Obj](STAIRS)<You decide to push forward. You can feel your journey coming to a close. The end is near. We're all doomed- ahem. Sorry. It seems I got carried away. You head upstairs.>{goto[33]}
