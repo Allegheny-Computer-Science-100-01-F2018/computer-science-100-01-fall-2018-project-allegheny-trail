@@ -1,1 +1,8 @@
-
+[Scene_Text]<You reach the top of the stairs. The room is lined with bookshelves, workbenches, and cupboards. In the center is a large cauldron.>
+[Key]<OBSERVE>
+[Obj](BOOKSHELVES)<You take a look at the many books on the shelves. Some are about alchemy, while others are about transmuation. You pick up a book titled "A Comprehensive Anthology of Building Materials Throughout the Ages". When you open it, a smaller book falls to the floor. It's manga. You slowly put the books back where you found them and walk away.>{goto[34]}
+[Obj](WORKBENCHES)<On the two workbenches in the room, you see an array of vials filled with strange liquids. There are also many varieties of mushrooms as well as knives to cut them.>{goto[34]}
+[Obj](CUPBOARDS)<In the cupboards, you find a wall of various mystical ingredients. "Root of mandrake", "Claw of bear", "Tooth of gopher", and "Feather of emu" are just a few of the labels you can see.>{goto[34]}
+[Obj](CAULDRON)<The cauldron is smoking and sounds like it is bubbling slowly. At its base, you see a ring of mushrooms growing from beneath it.>{goto[34]}
+[Key]<APPROACH>
+[Obj](CAULDRON)<You slowly approach the big, black cauldron. You have a knot in your stomach.>{goto[35]}
