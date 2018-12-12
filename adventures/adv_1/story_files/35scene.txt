@@ -1,5 +1,5 @@
 [Scene_Text]<You peer into the cauldron and are overwhelmed. The murky liquid shows you your true identity. You are the wizard. You cast the spell. You doomed every living creature within miles by turning them into mushrooms. Why were you in the forest? Were you transported by your own spell? Were you running away? Did you give yourself amnesia? The screams. The silence. The pain. The fear. You hear it all, you see it all, you remember everything. You did this. Your child...? Oh God, no. You look up out the window at the full moon. Its mocking you. No. No, no, no. This can't be true, can it? There is no way you could have done this. Right?>
 [Key]<ACCEPT>
-[Obj](TRUTH)<You search your feelings. You know it to be true. You accept your fate of solitude. You will live with this guilt forever.>{end}
+[Obj](TRUTH)<You search your feelings. You know it to be true. You accept your fate of solitude. You will live with this guilt forever.>{end[]}
 [Key]<DENY>
 [Obj](TRUTH)<NO! IT ISN'T TRUE! IT CAN'T BE TRUE! You scream and dunk your head in the cauldron in your insanity.>{goto[00]}
