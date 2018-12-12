@@ -25,7 +25,6 @@ public class Scene {
   */
   public void readScene(String inputSceneId) {
     sceneId = inputSceneId;
-    //String[][][] commands = new String[20][20][3];
     keyNum = 0;
     keyIndex = 0;
 
@@ -45,9 +44,9 @@ public class Scene {
       String input;
       input = scanner.nextLine();
 
-      //if (debug) {
+      if (debug) {
       System.out.println("DEBUG: Line Read = " + input);
-      //}
+      }
       if (!input.equals("")) {
         switch (input.substring(input.indexOf("["), input.indexOf("]") + 1)) {
           case ("[Scene_Text]"):
@@ -110,8 +109,7 @@ public class Scene {
 
     if (debug) {
       for (int i = 0; i < commands.length; i++) {
-        //System.out.println("commands[" + i + "][0][0] = " + commands[i][0][0]);
-
+        System.out.println("commands[" + i + "][0][0] = " + commands[i][0][0]);
         for (int z = 0; z < commands[1].length; z++) {
           System.out.println("commands[" + i + "][" + z + "][0] = " + commands[i][z][0]);
         }
@@ -154,7 +152,6 @@ public class Scene {
 
     String commandsList = "";
     for (int i = 0; i < commands.length; i++) {
-      //System.out.println("ARRAY " + commands[i][0][0]);
       if (commands[i][0][0] != null && !commands[i][0][0].equals("")) {
         commandsList = commandsList + "[" + commands[i][0][0] + "]   ";
       }
@@ -182,8 +179,6 @@ public class Scene {
     commandIn = commandIn.toUpperCase();
     objectIn = objectIn.toUpperCase();
 
-    //System.out.println("checkCommand(" + commandIn + ", " + objectIn + ");");
-
     while (!commandAvailable && commands[checkCounter][0][0] != null) {
       if (commandIn.contains(commands[checkCounter][0][0])) {
         commandAvailable = true;
@@ -209,7 +204,6 @@ public class Scene {
         if (objectIn.contains(commands[checkCounter][checkCounter2][0])) {
           objectAvailable = true;
         } else {
-          //System.out.println("Object FAILED");
           checkCounter2++;
         }
       }
@@ -263,7 +257,6 @@ public class Scene {
               Random rand = new Random();
               int randomNum = rand.nextInt(optionNum);
 
-              //rand[03][04][05]
               for (int i = 0; i < optionNum; i++) {
                 data[i] = com.substring(com.indexOf("[") + 1, com.indexOf("]"));
                 com = com.substring(com.indexOf("]") + 1, com.length());

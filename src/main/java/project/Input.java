@@ -29,9 +29,6 @@ public class Input {
   /** Initialize dictionary (read it all in!).
   */
   public void initDictionary() {
-
-    //System.out.println("DEBUG: Reading in Dictionary");
-
     Scanner scanner = null;
     try {
       File dictionaryFile = new File("adventures/adv_1/story_files/dictionary.txt");
@@ -43,8 +40,6 @@ public class Input {
     while (scanner.hasNextLine()) {
       String input;
       input = scanner.nextLine();
-
-      //System.out.println("DEBUG: Line Read = " + input);
 
       switch (input.substring(input.indexOf("["), input.indexOf("]") + 1)) {
         case ("[Main]"):
@@ -81,7 +76,7 @@ public class Input {
     while (scan.hasNext() && proceed == true) {
       inputCommand = scan.next();
       inputObject = inputCommand;
-      //System.out.println("DEBUG: Testing for " + inputCommand);
+
       if (sc.checkCommand(inputCommand, inputObject) == true) {
         proceed = false;
       } else {
@@ -100,7 +95,7 @@ public class Input {
       proceed = true;
       while (scan.hasNext() && proceed == true) {
         inputObject = scan.next();
-        //System.out.println("DEBUG: Testing for " + inputCommand + " and " + inputObject);
+
         if (sc.checkCommand(inputCommand, inputObject) == true
             && inputCommand.contains(inputObject) == false) {
           proceed = false;

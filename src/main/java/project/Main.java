@@ -24,7 +24,7 @@ public class Main {
     Scene sc = new Scene(input);
     boolean debug = false;
     boolean game = false;
-    //Scanner scan = new Scanner(System.in);
+
 
     clearScreen(); //Flush Terminal
 
@@ -109,9 +109,6 @@ public class Main {
     }
 
     while (game) {
-
-      //sc.printScene();
-      //Debug == System.out.println(input.parse(input.getInput(), sc));
       String initInput = input.getInput();
       initInput = initInput.toUpperCase();
 
@@ -126,7 +123,7 @@ public class Main {
         }
 
         System.exit(0);
-      } else if (initInput.equals("SAVES")) {
+      } else if (initInput.equals("SAVE")) {
         //Save s = new Save();
         //s.saveGame(sc);
       }
