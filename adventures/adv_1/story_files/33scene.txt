@@ -1,1 +1,6 @@
-
+[Scene_Text]<You are on the second floor of the tower. Directly across the room is a door that you think leads back to the main hall. To your left is a large mirror against the wall. There is another flight of stairs leading upwards. Other than that, and the mushrooms littering the floor, the room is empty.>
+[Key]<OBSERVE>
+[Obj](MIRROR)<Wow. How vain of you. You know what you look like. The mirror isn't even that fancy. In fact in kind of distorts your image. In the reflection you see the room you are in, mushrooms, and yourself. Not really sure what you expected. This isn't THAT kind of wizard story.>{goto[33]}
+[Obj](DOOR)<The padlock on the door makes you wish you had a skeleton key. Alas, you have no inventory.>{goto[33]}
+[Key]<GO>
+[Obj](STAIRS)<You take a deep breath of the sporey air and head up what you hope is the last flight of stairs.>{goto[34]}
