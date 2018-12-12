@@ -3,5 +3,5 @@
 [Obj](DOOR)<You walk over to the door, it is nothing but a supply closet. Inside you find things meant for cleaning. There is nothing of interest in here.>{goto[28]}
 [Obj](BEDS)<The beds are basic and stiff. It is clear to you that the owner of this establishment must not think kindly of his or her servants. One of the mushrooms in the corner seems larger than the rest by quite a bit. It is almost the size of an ten year old child.>{goto[28]}
 [Obj](LAUNDRY)<The clothes are dirty and reek of mushrooms. Almost as if whoever was wearing them bathed in a cauldron of mushroom stew.>{goto[28]}
-[key]<LEAVE>
+[Key]<LEAVE>
 [Obj](ROOM)<Having found little to interest you, you head back to the main foyer of the castle.>{goto[23]}
